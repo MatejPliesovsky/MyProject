@@ -4,6 +4,8 @@
   "description": "Registration Portal for Rally\r ---\r Welcome",
   "main": "index.js",
   "scripts": {
+    "compile": "webpack",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +16,10 @@
     "babel-loader": "^6.4.1",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.22.0",
-    "webpack": "^2.7.0"
+    "express": "^4.16.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^2.7.0",
+    "webpack-dev-middleware": "^1.12.0"
   }
 }
