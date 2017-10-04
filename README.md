@@ -1,3 +1,6 @@
 Registration Portal for Rally
--------------------
-Welcome
+---
+Welcome.
+
+Setup
+---
