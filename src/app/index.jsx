@@ -2,12 +2,12 @@ import React from 'react';
 import {render} from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Home from './pages/Home.jsx';
+import WelcomePage from './pages/WelcomePage.jsx';
 
 render((
   <Router>
     <Switch>
-      <Route exact path="/" component={Home}/>
+      <Route exact path="/" component={WelcomePage}/>
     </Switch>
   </Router>
   ),
