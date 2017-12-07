@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Default from '../layouts/Default.jsx';
 import SideBar from '../components/SideBar.jsx';
-import EventsList from '../components/EventsList.jsx';
+import MyTabsA from '../components/admin/MyTabsA.jsx';
 
 export default class AdminDash extends React.Component {
   render() {
@@ -12,7 +12,7 @@ export default class AdminDash extends React.Component {
       <div>
         <Default/>
         <SideBar/>
-        <EventsList/>
+        <MyTabsA/>
       </div>
     </MuiThemeProvider>);
   }
