@@ -7,7 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
     pos:{
       height:93+'%',
       width:54,
-      backgroundColor:'#90A4AE',
+      backgroundColor:'#00BCD4',
     },
   };
 
