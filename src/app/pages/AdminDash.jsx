@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Default from '../layouts/Default.jsx';
+import Default from '../layouts/Default2.jsx';
 import SideBar from '../components/SideBar.jsx';
 import MyTabsA from '../components/admin/MyTabsA.jsx';
 
