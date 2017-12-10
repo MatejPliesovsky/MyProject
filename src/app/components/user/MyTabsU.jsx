@@ -9,9 +9,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 const styles = {
   pos:{
-    marginTop:-889,
+    marginTop:-46.8 + '%',
     marginLeft:54,
-    width:1770,
+    width: 97.45 + '%',
   },
   headline: {
     fontSize: 24,
@@ -69,7 +69,7 @@ const styles = {
     marginLeft:10,
     textAlign:'center',
     display:'inline-block',
-    backgroundColor:'#43A047',
+    backgroundColor:'#F0F4C3',
   },
 };
 

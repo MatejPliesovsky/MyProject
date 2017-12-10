@@ -17,9 +17,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 const styles = {
   pos: {
-    marginTop: -889,
+    marginTop: -46.8 + '%',
     marginLeft: 54,
-    width: 1770
+    width: 97.45 + '%',
   },
   headline: {
     fontSize: 24,
