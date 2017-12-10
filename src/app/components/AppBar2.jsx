@@ -6,24 +6,23 @@ import FlatButton from 'material-ui/FlatButton';
 import {Link} from 'react-router';
 import RaisedButton from 'material-ui/RaisedButton';
 
-const styles = {
-  pos: {
-    width: 100 + '%'
-  }
+const styles={
+    pos:{
+      width:100+'%',
+    },
 }
 
 export default class AppbarWithNav extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
   }
 
   render() {
-
     return (
       <div>
         <AppBar title="Registration Portal" style={styles.pos} iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    iconElementRight={<FlatButton label="Sign In"/>}/>
-    </div>
+    iconElementRight={<FlatButton label="Home"/>}/>
+      </div>
     );
   }
 }
