@@ -15,7 +15,7 @@ const styles = {
     marginRight: 18 + '%',
     textAlign: 'center',
     display: 'inline-block',
-    backgroundColor: '#43A047'
+    backgroundColor: '#F0F4C3'
   },
   submit: {
     width: 100,
