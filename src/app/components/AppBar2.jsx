@@ -3,7 +3,7 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import FlatButton from 'material-ui/FlatButton';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const styles={
@@ -21,7 +21,7 @@ export default class AppbarWithNav extends Component {
     return (
       <div>
         <AppBar title="Registration Portal" style={styles.pos} iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    iconElementRight={<FlatButton label="Home"/>}/>
+    iconElementRight={<FlatButton containerElement={<Link to="/"/>} label="Home"/>}/>
       </div>
     );
   }
