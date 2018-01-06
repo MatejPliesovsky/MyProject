@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
+
+import styles from '../../css';
 
 class User extends Component {
 
@@ -15,15 +17,11 @@ class User extends Component {
   }
 
   fetchUsers() {
-    axios.get('/users')
-      .then( (response) => {
-        this.setState({
-          user: response.data
-        });
-      })
-      .catch( (error) => {
-        console.log(error);
-      });
+    axios.get('/users').then((response) => {
+      this.setState({user: response.data});
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
   componentWillMount() {
@@ -31,19 +29,16 @@ class User extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h2 >Profile tab</h2>
-        You can edit your profile here.<br />
-        <TextField id="text-field-default" value={this.state.user.name} /><br />
-        <TextField id="text-field-default" defaultValue="Last name" /><br />
-        <TextField id="text-field-default" defaultValue="Date of birth" /><br />
-        <TextField id="text-field-default" defaultValue="Adress" /><br />
-        <TextField id="text-field-default" defaultValue="Driving licence" /><br />
-
-      </div>
-
-    );
+    return (<div style={styles.user.posFields}>
+      <h2 >Profile tab</h2>
+      You can edit your profile here.<br/>
+    <TextField style={styles.user.headline} value={this.state.user.name}/><br/>
+      <TextField defaultValue="Last name"/><br/>
+      <TextField defaultValue="Date of birth"/><br/>
+      <TextField defaultValue="Adress"/><br/>
+      <TextField defaultValue="Driving licence"/><br/>
+      <img style={styles.user.circular} src="http://profile.actionsprout.com/default.jpeg"/>
+    </div>);
   }
 }
 
