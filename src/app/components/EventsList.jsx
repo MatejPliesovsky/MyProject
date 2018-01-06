@@ -2,19 +2,7 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import {List,ListItem} from 'material-ui/List';
 
-const styles={
-  bgPaper:{
-    height:500,
-    width:480,
-    marginTop:-46+'%',
-    marginLeft:10+'%',
-    marginBottom:10+'%',
-    marginRight:18+'%',
-    textAlign:'center',
-    display:'inline-block',
-    backgroundColor:'#F0F4C3',
-  },
-}
+import styles from '../css';
 
 export default class EventsList extends React.Component{
   constructor(props){
@@ -24,7 +12,7 @@ export default class EventsList extends React.Component{
     return (
       <div>
         <List>
-          <Paper style={styles.bgPaper} zDepth={2}>
+          <Paper style={styles.homeevents.table} zDepth={2}>
             <ListItem primaryText="Kalendar pretekov"/>
             <ListItem secondaryText="3.1.2018 MRC Zimna Levoca"/>
             <ListItem secondaryText="4.2.2018 MRC Dobsinska zima"/>
