@@ -2,7 +2,7 @@ export default{
   table:{
     height:500,
     width:480,
-    marginTop:-60+'%',
+    marginTop:-58+'%',
     marginLeft:10+'%',
     marginBottom:0+'%',
     marginRight:18+'%',

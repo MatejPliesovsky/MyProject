@@ -1,11 +1,11 @@
 export default {
-  bgPaper: {
-    height: 220,
-    width: 480,
-    marginTop: -44 + '%',
-    marginLeft: 60 + '%',
+  regTab: {
+    height: 450,
+    width: 777,
+    marginTop: -48 + '%',
+    marginLeft: 27 + '%',
     marginBottom: 0 + '%',
-    marginRight: 18 + '%',
+    marginRight: 10 + '%',
     textAlign: 'center',
     display: 'inline-block',
     backgroundColor: '#F0F4C3'
@@ -14,14 +14,14 @@ export default {
     width: 100,
     height: 45,
     marginTop: 1 + '%',
-    marginRight: 40 + '%',
+    marginRight: 38 + '%',
     marginBottom: 0 + '%'
   },
   cancel: {
     width: 100,
     height: 45,
-    marginTop: -13 + '%',
-    marginLeft: 40 + '%',
+    marginTop: -8 + '%',
+    marginLeft: 38 + '%',
     marginBottom: 0 + '%'
   },
 };

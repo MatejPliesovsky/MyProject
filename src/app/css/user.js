@@ -2,7 +2,7 @@ export default {
   posFields: {
     marginTop: 3 + '%',
     marginLeft: 2 + '%',
-    width: 20 + '%'
+    width: 40 + '%'
   },
   headline: {
     fontSize: 24,

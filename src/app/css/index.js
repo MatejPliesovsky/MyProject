@@ -5,6 +5,7 @@ import car from './car.js';
 import events from './events.js';
 import login from './login.js';
 import homeevents from './homeevents.js';
+import signup from './signup.js';
 
 export default {
     main,
@@ -14,4 +15,5 @@ export default {
     events,
     login,
     homeevents,
+    signup,
 }
