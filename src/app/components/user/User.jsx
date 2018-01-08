@@ -10,7 +10,11 @@ class User extends Component {
     super(props);
     this.state = {
       user: {
-        name: ''
+        firstname: 'Matej',
+        lastname: 'Pliesovsky',
+        dob: '19.9.1991',
+        adress: 'Lomnicka 3,040 01, Kosice, Slovakia',
+        drivinglicence: 'EX034098',
       }
     }
     this.fetchUsers = this.fetchUsers.bind(this);
@@ -32,11 +36,11 @@ class User extends Component {
     return (<div style={styles.user.posFields}>
       <h2 >Profile tab</h2>
       You can edit your profile here.<br/>
-    <TextField style={styles.user.headline} value={this.state.user.name}/><br/>
-      <TextField defaultValue="Last name"/><br/>
-      <TextField defaultValue="Date of birth"/><br/>
-      <TextField defaultValue="Adress"/><br/>
-      <TextField defaultValue="Driving licence"/><br/>
+    <TextField value={this.state.user.firstname}/><br/>
+  <TextField value={this.state.user.lastname}/><br/>
+<TextField value={this.state.user.dob}/><br/>
+      <TextField value={this.state.user.adress}/><br/>
+    <TextField value={this.state.user.drivinglicence}/><br/>
       <img style={styles.user.circular} src="http://profile.actionsprout.com/default.jpeg"/>
     </div>);
   }
