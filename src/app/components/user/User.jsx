@@ -13,8 +13,11 @@ class User extends Component {
         firstname: 'Matej',
         lastname: 'Pliesovsky',
         dob: '19.9.1991',
-        adress: 'Lomnicka 3,040 01, Kosice, Slovakia',
-        drivinglicence: 'EX034098',
+        street: 'Lomnicka 3',
+        city: 'Kosice',
+        zip: '040 01',
+        state: 'Slovakia',
+        drivinglicence: 'EX034098'
       }
     }
     this.fetchUsers = this.fetchUsers.bind(this);
@@ -36,11 +39,14 @@ class User extends Component {
     return (<div style={styles.user.posFields}>
       <h2 >Profile tab</h2>
       You can edit your profile here.<br/>
-    <TextField value={this.state.user.firstname}/><br/>
-  <TextField value={this.state.user.lastname}/><br/>
-<TextField value={this.state.user.dob}/><br/>
-      <TextField value={this.state.user.adress}/><br/>
-    <TextField value={this.state.user.drivinglicence}/><br/>
+      <TextField value={this.state.user.firstname}/><br/>
+      <TextField value={this.state.user.lastname}/><br/>
+      <TextField value={this.state.user.dob}/><br/>
+      <TextField value={this.state.user.street}/><br/>
+      <TextField value={this.state.user.city}/><br/>
+      <TextField value={this.state.user.zip}/><br/>
+      <TextField value={this.state.user.state}/><br/>
+      <TextField value={this.state.user.drivinglicence}/><br/>
       <img style={styles.user.circular} src="http://profile.actionsprout.com/default.jpeg"/>
     </div>);
   }

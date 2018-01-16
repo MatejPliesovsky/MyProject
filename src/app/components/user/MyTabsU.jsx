@@ -4,7 +4,6 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import Paper from 'material-ui/Paper';
 import {List, ListItem} from 'material-ui/List';
 import SwipeableViews from 'react-swipeable-views';
-import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import User from './User.jsx';
@@ -20,6 +19,12 @@ const styles = {
   },
   slide: {
     padding: 10
+  },
+  save: {
+    margin: 10
+  },
+  cancel: {
+    margin: 10
   }
 };
 
@@ -44,6 +49,8 @@ export default class MyTabsU extends React.Component {
         <Tab label="Cars" value={2}/>
         <Tab label="Events" value={3}/>
       </Tabs>
+      <RaisedButton containerElement={<Link to = "/UserDash" />} label="Submit" primary={true} style={styles.save}/>
+    <RaisedButton containerElement={<Link to = "/UserDash" />} label="Cancel" secondary={true} style={styles.cancel}/>
       <SwipeableViews index={this.state.slideIndex} onChangeIndex={this.handleChange}>
 
         <User/>
@@ -57,7 +64,7 @@ export default class MyTabsU extends React.Component {
 
         <div style={styles.slide}>
           <Events/>
-      </div>
+        </div>
 
       </SwipeableViews>
     </div>);
