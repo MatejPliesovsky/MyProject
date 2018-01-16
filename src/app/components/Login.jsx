@@ -17,7 +17,7 @@ export default class Login extends React.Component {
         <Paper style={styles.login.bgPaper} zDepth={2}><ListItem primaryText="Prihlasenie"/>
       <TextField hintText="Username"/><br/>
     <TextField hintText="Password"/>
-        <RaisedButton containerElement={<Link to="/UserDash"/>} label="Submit" primary={true} style={styles.login.submit} />
+  <RaisedButton containerElement={<Link to="/UserHomeScreen"/>} label="Submit" primary={true} style={styles.login.submit} />
       <RaisedButton containerElement={<Link to="/AdminDash"/>} label="Cancel" primary={true} style={styles.login.cancel} />
       </Paper>
     </List>
