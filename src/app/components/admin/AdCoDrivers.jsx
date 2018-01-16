@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {
   Table,
   TableBody,
@@ -8,8 +9,17 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
-import TextField from 'material-ui/TextField';
-import Toggle from 'material-ui/Toggle';
+import IconButton from 'material-ui/IconButton';
+import Edit from 'material-ui/svg-icons/editor/mode-edit';
+import Delete from 'material-ui/svg-icons/action/delete';
+
+const styles = {
+  smallIcon: {
+    width: 26,
+    height: 26
+  },
+};
+
 
 const tableData = [
   {
@@ -71,6 +81,7 @@ class AdCoDrivers extends Component {
               <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
               <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
               <TableHeaderColumn tooltip="The Team">Team</TableHeaderColumn>
+              <TableHeaderColumn ></TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody
@@ -84,7 +95,17 @@ class AdCoDrivers extends Component {
                 <TableRowColumn>{index}</TableRowColumn>
                 <TableRowColumn>{row.name}</TableRowColumn>
                 <TableRowColumn>{row.Team}</TableRowColumn>
-              </TableRow>
+                <TableRowColumn>
+                  <div>
+                    <IconButton iconStyle={styles.smallIcon} containerElement={<Link to="/Editor"/>}>
+                      <Edit/>
+                    </IconButton>
+                    <IconButton iconStyle={styles.smallIcon} containerElement={<Link to="/Editor"/>}>
+                      <Delete/>
+                    </IconButton>
+                    </div>
+                    </TableRowColumn>
+            </TableRow>
               ))}
           </TableBody>
         </Table>

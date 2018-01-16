@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {
   Table,
   TableBody,
@@ -8,8 +9,17 @@ import {
   TableRow,
   TableRowColumn
 } from 'material-ui/Table';
-import TextField from 'material-ui/TextField';
-import Toggle from 'material-ui/Toggle';
+import IconButton from 'material-ui/IconButton';
+import Edit from 'material-ui/svg-icons/editor/mode-edit';
+import Delete from 'material-ui/svg-icons/action/delete';
+
+const styles = {
+  smallIcon: {
+    width: 26,
+    height: 26
+  },
+};
+
 
 const tableData = [
   {
@@ -55,6 +65,7 @@ class AdEvents extends Component {
             <TableHeaderColumn tooltip="The Date">Date</TableHeaderColumn>
             <TableHeaderColumn tooltip="The Event">Event</TableHeaderColumn>
             <TableHeaderColumn tooltip="The Kategory">Kategory</TableHeaderColumn>
+            <TableHeaderColumn ></TableHeaderColumn>
           </TableRow>
         </TableHeader>
         <TableBody displayRowCheckbox={this.state.showCheckboxes} deselectOnClickaway={this.state.deselectOnClickaway} showRowHover={this.state.showRowHover} stripedRows={this.state.stripedRows}>
@@ -64,6 +75,16 @@ class AdEvents extends Component {
               <TableRowColumn>{row.date}</TableRowColumn>
               <TableRowColumn>{row.event}</TableRowColumn>
               <TableRowColumn>{row.kategory}</TableRowColumn>
+              <TableRowColumn>
+                <div>
+                  <IconButton iconStyle={styles.smallIcon}>
+                    <Edit/>
+                  </IconButton>
+                  <IconButton iconStyle={styles.smallIcon} containerElement={<Link to="/Editor"/>}>
+                    <Delete/>
+                  </IconButton>
+                </div>
+              </TableRowColumn>
             </TableRow>))
           }
         </TableBody>
