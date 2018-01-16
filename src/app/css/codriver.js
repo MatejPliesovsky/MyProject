@@ -2,7 +2,7 @@ export default {
   posFields:{
     marginTop: 3 + '%',
     marginLeft:2 + '%',
-    width: 20 + '%',
+    width: 40 + '%',
   },
   slide: {
     padding: 10,
@@ -11,7 +11,7 @@ export default {
     marginLeft:10,
   },
   circular:{
-    marginTop:-240,
+    marginTop:-380,
     marginLeft:500,
     width:240,
     height:240,

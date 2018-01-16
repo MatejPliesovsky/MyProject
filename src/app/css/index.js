@@ -6,6 +6,9 @@ import events from './events.js';
 import login from './login.js';
 import homeevents from './homeevents.js';
 import signup from './signup.js';
+import profile from './profile.js';
+import team from './team';
+import carsedit from './carsedit';
 
 export default {
     main,
@@ -16,4 +19,7 @@ export default {
     login,
     homeevents,
     signup,
+    profile,
+    team,
+    carsedit,
 }
