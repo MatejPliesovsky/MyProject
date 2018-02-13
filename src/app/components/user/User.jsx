@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
+
+import styles from '../../css';
 
 class User extends Component {
 
@@ -8,22 +10,25 @@ class User extends Component {
     super(props);
     this.state = {
       user: {
-        name: ''
+        firstname: 'Matej',
+        lastname: 'Pliesovsky',
+        dob: '19.9.1991',
+        street: 'Lomnicka 3',
+        city: 'Kosice',
+        zip: '040 01',
+        state: 'Slovakia',
+        drivinglicence: 'EX034098'
       }
     }
     this.fetchUsers = this.fetchUsers.bind(this);
   }
 
   fetchUsers() {
-    axios.get('/users')
-      .then( (response) => {
-        this.setState({
-          user: response.data
-        });
-      })
-      .catch( (error) => {
-        console.log(error);
-      });
+    axios.get('/users').then((response) => {
+      this.setState({user: response.data});
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
   componentWillMount() {
@@ -31,19 +36,19 @@ class User extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h2 >Profile tab</h2>
-        You can edit your profile here.<br />
-        <TextField id="text-field-default" value={this.state.user.name} /><br />
-        <TextField id="text-field-default" defaultValue="Last name" /><br />
-        <TextField id="text-field-default" defaultValue="Date of birth" /><br />
-        <TextField id="text-field-default" defaultValue="Adress" /><br />
-        <TextField id="text-field-default" defaultValue="Driving licence" /><br />
-
-      </div>
-
-    );
+    return (<div style={styles.user.posFields}>
+      <h2 >Profile tab</h2>
+      You can edit your profile here.<br/>
+      <TextField value={this.state.user.firstname}/><br/>
+      <TextField value={this.state.user.lastname}/><br/>
+      <TextField value={this.state.user.dob}/><br/>
+      <TextField value={this.state.user.street}/><br/>
+      <TextField value={this.state.user.city}/><br/>
+      <TextField value={this.state.user.zip}/><br/>
+      <TextField value={this.state.user.state}/><br/>
+      <TextField value={this.state.user.drivinglicence}/><br/>
+      <img style={styles.user.circular} src="http://profile.actionsprout.com/default.jpeg"/>
+    </div>);
   }
 }
 

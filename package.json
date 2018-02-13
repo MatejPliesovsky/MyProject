@@ -26,10 +26,9 @@
     "cookie-parser": "^1.4.3",
     "debug": "^3.0.1",
     "express": "^4.15.4",
+    "material-design-icons": "^3.0.1",
     "material-ui": "^0.19.4",
     "mysql": "^2.14.1",
-    "node-sass": "^4.5.3",
-    "node-sass-middleware": "^0.11.0",
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -40,11 +39,9 @@
     "webpack": "^3.6.0"
   },
   "scripts": {
-    "minify-css": "uglifycss src/public/css/main.css > src/public/css/main.min.css",
-    "styles": "node-sass --include-path src src/scss/main.scss -o src/public/css/ --watch",
     "server": "nodemon app.js",
     "react": "webpack -d --watch",
-    "start": "concurrently \"npm run react\" \"npm run styles\" \"npm run minify-css\" \"npm run server\""
+    "start": "concurrently \"npm run react\" \"npm run server\""
   },
   "devDependencies": {
     "node-sass": "^4.5.3",
