@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
+import DateRange from 'material-ui/svg-icons/action/date-range';
 import Settings from 'material-ui/svg-icons/action/settings';
 import Cancel from 'material-ui/svg-icons/navigation/cancel';
 import FontIcon from 'material-ui/FontIcon';
@@ -58,8 +59,9 @@ export default class HomeScreenComp extends React.Component {
           <div style={styles.headline}>WELCOME TO REGISTRATION PORTAL
             <br/>For Motor-Sport Events</div>
           <div>
-            <img src="https://img.clipartpig.com/2017/1771032649-checkered-flag-clipart-kid-2.jpg"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY_wSgacwPTqyKPJqfue0UxKlRdQ2CWUfzD8ZaPgO7OLgSlNCX"/>
             <div style={styles.line1}></div>
+          <RaisedButton containerElement={<Link to="/Events"/>} label="Events" primary={true} style={styles.daterange} icon={<DateRange />}/>
           <RaisedButton containerElement={<Link to="/UserDash"/>} label="Settings" primary={true} style={styles.settings} icon={<Settings />}/>
         <RaisedButton lcontainerElement={<Link to="/UserHomeScreen"/>} label="Cancel" secondary={true} style={styles.cancel} icon={<Cancel />}/>
             <div style={styles.line2}></div>

@@ -9,7 +9,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import User from './User.jsx';
 import CoDriver from './CoDriver.jsx';
 import Car from './Car.jsx';
-import Events from './Events.jsx';
 
 const styles = {
   pos: {
@@ -47,7 +46,6 @@ export default class MyTabsU extends React.Component {
         <Tab label="Profile" value={0}/>
         <Tab label="Team" value={1}/>
         <Tab label="Cars" value={2}/>
-        <Tab label="Events" value={3}/>
       </Tabs>
       <RaisedButton containerElement={<Link to = "/UserDash" />} label="Submit" primary={true} style={styles.save}/>
     <RaisedButton containerElement={<Link to = "/UserDash" />} label="Cancel" secondary={true} style={styles.cancel}/>
@@ -60,10 +58,6 @@ export default class MyTabsU extends React.Component {
 
         <div style={styles.slide}>
           <Car/>
-        </div>
-
-        <div style={styles.slide}>
-          <Events/>
         </div>
 
       </SwipeableViews>

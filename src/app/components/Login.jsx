@@ -13,6 +13,7 @@ export default class Login extends React.Component {
   }
   render() {
     return (<div>
+      <div>
       <List>
         <Paper style={styles.login.bgPaper} zDepth={2}><ListItem primaryText="Prihlasenie"/>
       <TextField hintText="Username"/><br/>
@@ -21,6 +22,11 @@ export default class Login extends React.Component {
       <RaisedButton containerElement={<Link to="/AdminDash"/>} label="Cancel" primary={true} style={styles.login.cancel} />
       </Paper>
     </List>
-  </div>);
+  </div>
+  <div>
+    <img style={styles.login.disImig} src="https://tango-hamburg.info//images/race-20car-20clipart-20for-20kids-clip-art-race-car-603_262.png"/>
+  </div>
+</div>
+);
   }
 }

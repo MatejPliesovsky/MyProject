@@ -24,4 +24,9 @@ export default {
     marginLeft: 40 + '%',
     marginBottom: 0 + '%'
   },
+  disImig: {
+    marginTop:-400,
+    marginLeft:850,
+
+  }
 };
