@@ -37,5 +37,8 @@ export default {
     textAlign: 'center',
     display: 'inline-block',
     backgroundColor: '#F0F4C3'
-  }
+  },
+  btnReg:{
+    marginLeft:30,
+  },
 };

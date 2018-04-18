@@ -21,7 +21,7 @@ export default class AppbarWithNav extends Component {
     return (
       <div>
         <AppBar title="Registration Portal" style={styles.pos} iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    iconElementRight={<FlatButton containerElement={<Link to="/SignUp"/>} label="Register"/>}/>
+    iconElementRight={<FlatButton containerElement={<Link to="/SignUp"/>} label="Sing Up"/>}/>
       </div>
     );
   }

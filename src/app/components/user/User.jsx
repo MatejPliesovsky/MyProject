@@ -24,7 +24,7 @@ class User extends Component {
   }
 
   fetchUsers() {
-    axios.get('/users').then((response) => {
+    axios.get('/appusers/1').then((response) => {
       this.setState({user: response.data});
     }).catch((error) => {
       console.log(error);

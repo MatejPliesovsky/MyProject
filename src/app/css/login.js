@@ -22,11 +22,10 @@ export default {
     height: 45,
     marginTop: -13 + '%',
     marginLeft: 40 + '%',
-    marginBottom: 0 + '%'
+    marginBottom: 0 + '%',
   },
   disImig: {
-    marginTop:-400,
-    marginLeft:850,
-
+    marginTop:50,
+    marginLeft:-165,
   }
 };

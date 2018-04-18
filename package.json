@@ -23,11 +23,13 @@
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.18.1",
     "concurrently": "^3.5.0",
+    "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",
     "debug": "^3.0.1",
     "express": "^4.15.4",
     "material-design-icons": "^3.0.1",
     "material-ui": "^0.19.4",
+    "mongodb": "^3.0.5",
     "mysql": "^2.14.1",
     "path": "^0.12.7",
     "react": "^15.6.1",
@@ -35,6 +37,7 @@
     "react-router-dom": "^4.2.2",
     "react-swipeable-views": "^0.12.12",
     "request": "^2.81.0",
+    "rs": "0.0.2",
     "uglifycss": "0.0.27",
     "webpack": "^3.6.0"
   },
@@ -44,6 +47,8 @@
     "start": "concurrently \"npm run react\" \"npm run server\""
   },
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
     "node-sass": "^4.5.3",
     "nodemon": "^1.12.1",
     "sass-loader": "^6.0.6",

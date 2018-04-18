@@ -18,7 +18,7 @@ export default class Footer extends Component {
   render() {
     return(
       <div style={styles.footer}>
-        RegPortal © 2017
+        RegPortal © 2018
       </div>
     );
   }

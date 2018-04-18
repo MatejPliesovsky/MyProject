@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
+import {Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
 import axios from 'axios';
 
 import styles from '../css';
 
-class Events extends Component {
+class EventsComp extends Component {
 
   constructor(props) {
     super(props);
@@ -47,10 +48,11 @@ class Events extends Component {
           <ListItem primaryText="Event description"/>
         <img style={styles.events.eventIm} src="http://www.minirallycup.sk/docs/mrc_dz_2017_plagat.jpg"/>
       <Paper style={styles.events.text} zDepth={0}>"Zimna automobilova sutaz, nielen pre profesionalnych jazdcov, zaradena do podujatia MRC 2018."</Paper>
-        </Paper>
+    <RaisedButton containerElement={<Link to = "/EventRegistration" />} label="Registration" secondary={true}/>
+      </Paper>
       </List>
     </div>);
   }
 }
 
-export default Events;
+export default EventsComp;

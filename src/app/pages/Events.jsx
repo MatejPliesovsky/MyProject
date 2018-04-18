@@ -6,7 +6,7 @@ import Default2 from '../layouts/Default2.jsx';
 import SideBar from '../components/SideBar.jsx';
 import EventsComp from '../components/EventsComp.jsx';
 
-export default class UserHomeScreen extends React.Component {
+export default class Events extends React.Component {
   render() {
     return (<MuiThemeProvider>
       <div>
