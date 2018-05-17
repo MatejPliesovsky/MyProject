@@ -5,10 +5,12 @@ import car from './car.js';
 import events from './events.js';
 import login from './login.js';
 import homeevents from './homeevents.js';
+import homescreen from './homescreen.js';
 import signup from './signup.js';
 import profile from './profile.js';
-import team from './team';
-import carsedit from './carsedit';
+import team from './team.js';
+import carsedit from './carsedit.js';
+import eventregcomp from './eventregcomp.js';
 
 export default {
     main,
@@ -18,8 +20,10 @@ export default {
     events,
     login,
     homeevents,
+    homescreen,
     signup,
     profile,
     team,
     carsedit,
+    eventregcomp,
 }

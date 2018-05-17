@@ -30,27 +30,42 @@ var config = {
           ],
           plugins: ['react-html-attrs', 'transform-decorators-legacy', 'transform-class-properties']
         }
-      }
-    ]
-  },
-  devServer: {
-    host: 'localhost', // Defaults to `localhost`
-    port: 3000, // Defaults to 8080
-    proxy: {
-      '^/api/*': {
-        target: 'http://localhost:3000/',
-        secure: false
-      }
-    }
-  },
+      }, {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]?[hash]'
+            }
+          }, {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  limit: 8192
+                }
+              ]
+            },
+            devServer: {
+              host: 'localhost', // Defaults to `localhost`
+              port: 3000, // Defaults to 8080
+              proxy: {
+                '^/api/*': {
+                  target: 'http://localhost:3000/',
+                  secure: false
+                }
+              }
+            },
 
-  plugins: debug
-    ? []
-    : [
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.OccurrenceOrderPlugin(),
-      new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
-    ]
-}
+            plugins: debug
+              ? []
+              : [
+                new webpack.optimize.DedupePlugin(),
+                new webpack.optimize.OccurrenceOrderPlugin(),
+                new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
+              ]
+          }
 
-module.exports = config;
+          module.exports = config;

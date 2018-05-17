@@ -13,7 +13,7 @@ import EventRegistration from './pages/EventRegistration.jsx';
 
 render((<Router>
   <Switch>
-    <Route exact="exact" path="/" component={WelcomePage}/>
+    <Route exact path="/" component={WelcomePage}/>
     <Route path='/UserHomeScreen' component={UserHomeScreen}/>
     <Route path='/UserDash' component={UserDash}/>
     <Route path='/AdminDash' component={AdminDash}/>

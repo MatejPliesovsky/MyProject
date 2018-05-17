@@ -78,7 +78,7 @@ class AdDrivers extends Component {
         <TableHeader displaySelectAll={this.state.showCheckboxes} adjustForCheckbox={this.state.showCheckboxes} enableSelectAll={this.state.enableSelectAll}>
           <TableRow>
             <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
-            <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
+          <TableHeaderColumn tooltip="The Full Name">First Name and Last Name</TableHeaderColumn>
             <TableHeaderColumn tooltip="The Team">Team</TableHeaderColumn>
             <TableHeaderColumn ></TableHeaderColumn>
           </TableRow>
@@ -88,7 +88,7 @@ class AdDrivers extends Component {
             tableData.map((row, index) => (<TableRow key={index}>
               <TableRowColumn>{index}</TableRowColumn>
             <TableRowColumn>{row.first_name+ ' ' + row.last_name}</TableRowColumn>
-              <TableRowColumn>{row.Team}</TableRowColumn>
+          <TableRowColumn>{row.team}</TableRowColumn>
               <TableRowColumn>
                 <div>
                   <IconButton iconStyle={styles.smallIcon} containerElement={<Link to="/Editor"/>}>

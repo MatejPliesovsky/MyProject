@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import png from './images/race.png'
 
 import styles from '../css';
 
@@ -20,7 +21,7 @@ export default class Login extends React.Component {
             <TextField hintText="Password"/>
             <RaisedButton containerElement={<Link to = "/UserHomeScreen" />} label="Submit" primary={true} style={styles.login.submit}/>
             <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Cancel" primary={true} style={styles.login.cancel}/>
-          <img style={styles.login.disImig} src="https://longspeakbsa.org/wp-content/uploads/2015/11/Raceway-Car-Picture.png"/>
+            <img style={styles.login.disImig} src={png}/>
           </Paper>
         </List>
       </div>

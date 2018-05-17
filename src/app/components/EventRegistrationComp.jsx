@@ -13,23 +13,38 @@ export default class EventRegistrationComp extends React.Component {
   }
   render() {
     return (<div>
-      <List>
-        <Paper style={styles.signup.regTab} zDepth={2}><ListItem primaryText="Registracia"/>
-      <TextField hintText="Driver's First name"/><br/>
-    <TextField hintText="Drover's Last name"/>
-          <TextField hintText="E-mail"/><br/>
-          <TextField hintText="Street"/>
-          <TextField hintText="Street number"/><br/>
-          <TextField hintText="City"/>
-          <TextField hintText="State"/><br/>
-          <TextField hintText="ZIP"/>
-          <TextField hintText="Phone number"/><br/>
-        <TextField hintText="Co-Driver's First name"/><br/>
-      <TextField hintText="Co-Drover's Last name"/>
-        <RaisedButton containerElement={<Link to = "/" />} label="Submit" primary={true} style={styles.signup.submit}/>
-      <RaisedButton containerElement={<Link to = "/" />} label="Cancel" primary={true} style={styles.signup.cancel}/>
-        </Paper>
-      </List>
+      <div style={styles.eventregcomp.evRegTab}>
+        <div style={styles.eventregcomp.topText}>Registration</div>
+        <TextField hintText="Driver's First name"/>
+        <TextField hintText="Driver's Last name"/><br/>
+        <TextField hintText="E-mail"/>
+        <TextField hintText="Phone number"/><br/>
+        <TextField hintText="Street"/>
+        <TextField hintText="Street number"/><br/>
+        <TextField hintText="City"/>
+        <TextField hintText="State"/><br/>
+        <TextField hintText="ZIP"/><br/><br/><br/>
+        <TextField hintText="Co-Driver's First name"/>
+        <TextField hintText="Co-Driver's Last name"/><br/>
+        <TextField hintText="Phone number"/>
+        <TextField hintText="Street"/><br/>
+        <TextField hintText="Street number"/>
+        <TextField hintText="City"/><br/>
+        <TextField hintText="State"/>
+        <TextField hintText="ZIP"/><br/>
+        <br/><RaisedButton containerElement={<Link to = "/" />} label="Submit" primary={true} style={styles.eventregcomp.submit}/>
+      <RaisedButton containerElement={<Link to = "/" />} label="Cancel" secondary={true} style={styles.eventregcomp.cancel}/>
+      </div>
+      <div style={styles.eventregcomp.evRegTabCar}>
+        <TextField hintText="Car's manufacturer"/>
+      <TextField hintText="Model"/><br/>
+    <TextField hintText="value"/>
+        <TextField hintText="Fuel"/><br/>
+        <TextField hintText="Power"/>
+        <TextField hintText="Gear"/><br/>
+        <TextField hintText="Turbo"/>
+        <TextField hintText="EVC"/><br/>
+      </div>
     </div>);
   }
 }

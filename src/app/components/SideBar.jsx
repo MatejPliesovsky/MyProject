@@ -5,7 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 
   const styles={
     pos:{
-      height:93+'%',
+      height:90 + '%',
       width:54,
       backgroundColor:'#00BCD4',
     },

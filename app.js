@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-app.use('/appusers', users);
+app.use('/drivers', users);
 app.use('/drivers', drivers);
 
 app.use('*', function(req, res) {
