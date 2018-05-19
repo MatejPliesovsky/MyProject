@@ -12,7 +12,7 @@ export default class WelcomePage extends React.Component {
     return (<MuiThemeProvider>
       <div>
         <Default/>
-        <SideBar/>
+      <SideBar />
         <EventsList/>
       <Login />
       </div>

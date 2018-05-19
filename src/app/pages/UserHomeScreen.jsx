@@ -11,7 +11,7 @@ export default class UserHomeScreen extends React.Component {
     return (<MuiThemeProvider>
       <div>
         <Default2/>
-        <SideBar/>
+      <SideBar />
       <HomeScreenComp/>
       </div>
     </MuiThemeProvider>);

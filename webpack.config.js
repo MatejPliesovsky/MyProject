@@ -38,34 +38,40 @@ var config = {
             options: {
               name: '[path][name].[ext]?[hash]'
             }
-          }, {
-            test: /\.(png|jpg|gif)$/,
-            use: [
-              {
-                loader: 'url-loader',
-                options: {
-                  limit: 8192
-                }
-              ]
-            },
-            devServer: {
-              host: 'localhost', // Defaults to `localhost`
-              port: 3000, // Defaults to 8080
-              proxy: {
-                '^/api/*': {
-                  target: 'http://localhost:3000/',
-                  secure: false
-                }
-              }
-            },
-
-            plugins: debug
-              ? []
-              : [
-                new webpack.optimize.DedupePlugin(),
-                new webpack.optimize.OccurrenceOrderPlugin(),
-                new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
-              ]
           }
+        ]
+      }, {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      }
+    ]
+  },
 
-          module.exports = config;
+      plugins: debug
+        ? []
+        : [
+          new webpack.optimize.DedupePlugin(),
+          new webpack.optimize.OccurrenceOrderPlugin(),
+          new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
+        ],
+
+    devServer: {
+      host: 'localhost', // Defaults to `localhost`
+      port: 3000,
+      proxy: {
+        '^/api/*': {
+          target: 'http://localhost:3000/',
+          secure: false
+        }
+      }
+    },
+  };
+
+  module.exports = config;

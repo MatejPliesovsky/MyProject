@@ -62,9 +62,9 @@ class AdEvents extends Component {
         <TableHeader displaySelectAll={this.state.showCheckboxes} adjustForCheckbox={this.state.showCheckboxes} enableSelectAll={this.state.enableSelectAll}>
           <TableRow>
             <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
-            <TableHeaderColumn tooltip="The Date">Date</TableHeaderColumn>
-            <TableHeaderColumn tooltip="The Event">Event</TableHeaderColumn>
-            <TableHeaderColumn tooltip="The Kategory">Kategory</TableHeaderColumn>
+          <TableHeaderColumn tooltip="The Date">Dátum</TableHeaderColumn>
+        <TableHeaderColumn tooltip="The Event">Podujatie</TableHeaderColumn>
+      <TableHeaderColumn tooltip="The Kategory">Kategória</TableHeaderColumn>
             <TableHeaderColumn ></TableHeaderColumn>
           </TableRow>
         </TableHeader>

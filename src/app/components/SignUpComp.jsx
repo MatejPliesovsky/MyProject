@@ -15,20 +15,20 @@ export default class SignUpComp extends React.Component {
     return (<div>
       <List>
         <Paper style={styles.signup.regTab} zDepth={2}><ListItem primaryText="Registracia"/>
-      <TextField hintText="Username"/>
-    <TextField hintText="First name"/><br/>
-          <TextField hintText="Last name"/>
+      <TextField hintText="Prihlasovacie meno"/>
+    <TextField hintText="Meno"/><br/>
+  <TextField hintText="Priezvisko"/>
           <TextField hintText="E-mail"/><br/>
-          <TextField hintText="Street"/>
-          <TextField hintText="Street number"/><br/>
-          <TextField hintText="City"/>
-          <TextField hintText="State"/><br/>
-          <TextField hintText="ZIP"/>
-          <TextField hintText="Phone number"/><br/>
-          <TextField hintText="Password"/>
-          <TextField hintText="Confirm Password"/><br/>
-        <RaisedButton containerElement={<Link to = "/" />} label="Submit" primary={true} style={styles.signup.submit}/>
-      <RaisedButton containerElement={<Link to = "/" />} label="Cancel" primary={true} style={styles.signup.cancel}/>
+        <TextField hintText="Ulica"/>
+      <TextField hintText="Číslo domu"/><br/>
+    <TextField hintText="Mesto"/>
+  <TextField hintText="PSČ"/><br/>
+<TextField hintText="Štát"/>
+          <TextField hintText="Telefón"/><br/>
+        <TextField hintText="Heslo"/>
+      <TextField hintText="Potvrdenie hesla"/><br/>
+    <RaisedButton containerElement={<Link to = "/" />} label="Uložiť" primary={true} style={styles.signup.submit}/>
+  <RaisedButton containerElement={<Link to = "/" />} label="Zrušiť" primary={true} style={styles.signup.cancel}/>
         </Paper>
       </List>
     </div>);

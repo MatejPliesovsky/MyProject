@@ -11,7 +11,7 @@ export default class Events extends React.Component {
     return (<MuiThemeProvider>
       <div>
         <Default2/>
-        <SideBar/>
+      <SideBar />
         <EventsComp/>
       </div>
     </MuiThemeProvider>);

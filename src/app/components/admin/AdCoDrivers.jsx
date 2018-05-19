@@ -79,8 +79,8 @@ class AdCoDrivers extends Component {
           >
             <TableRow>
               <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
-              <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
-              <TableHeaderColumn tooltip="The Team">Team</TableHeaderColumn>
+            <TableHeaderColumn tooltip="The Name">Meno a Priezvisko</TableHeaderColumn>
+          <TableHeaderColumn tooltip="The Team">Tím</TableHeaderColumn>
               <TableHeaderColumn ></TableHeaderColumn>
             </TableRow>
           </TableHeader>

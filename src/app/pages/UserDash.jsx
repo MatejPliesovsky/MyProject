@@ -11,7 +11,7 @@ export default class UserDash extends React.Component {
     return (<MuiThemeProvider>
       <div>
         <Default2/>
-        <SideBar/>
+      <SideBar />
         <MyTabsU/>
       </div>
     </MuiThemeProvider>);

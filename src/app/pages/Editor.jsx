@@ -11,7 +11,7 @@ export default class Editor extends React.Component {
     return (<MuiThemeProvider>
       <div>
         <Default/>
-        <SideBar/>
+      <SideBar />
       <CompEditor/>
       </div>
     </MuiThemeProvider>);

@@ -13,16 +13,16 @@ class Car extends Component {
 
   render() {
     return (<div style={styles.car.posFields}>
-      <h2>Car's details</h2>
-      You can edit car's detais here.<br/>
-      <TextField id="text-field-default" defaultValue="Brand"/><br/>
+      <h2>Údaje o vozidle</h2>
+    Tu môžete upraviť údaje o vozidle.<br/>
+    <TextField id="text-field-default" defaultValue="Výrobca"/><br/>
       <TextField id="text-field-default" defaultValue="Model"/><br/>
-      <TextField id="text-field-default" defaultValue="Fuel"/><br/>
-      <TextField id="text-field-default" defaultValue="Power"/><br/>
+    <TextField id="text-field-default" defaultValue="Objem motora"/><br/>
+  <TextField id="text-field-default" defaultValue="Výkon"/><br/>
       <TextField id="text-field-default" defaultValue="Turbo"/><br/>
-      <TextField id="text-field-default" defaultValue="Gear"/><br/>
+    <TextField id="text-field-default" defaultValue="Pohon"/><br/>
       <img style={styles.car.carsIm} src="http://elektronika.com.pl/wp-content/uploads/2014/03/grupa-osobowe.png"/>
-    <RaisedButton label="Choose an Image" labelPosition="before" style={styles.car.upload} containerElement="label"><input type="file" style={styles.car.imgInput}/></RaisedButton>
+    <RaisedButton label="Nahrať fotku" labelPosition="before" style={styles.car.upload} containerElement="label"><input type="file" style={styles.car.imgInput}/></RaisedButton>
     </div>);
   }
 }

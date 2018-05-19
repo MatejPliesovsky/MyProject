@@ -48,7 +48,7 @@ class EventsComp extends Component {
           <ListItem primaryText="Event description"/>
         <img style={styles.events.eventIm} src="http://www.minirallycup.sk/docs/mrc_dz_2017_plagat.jpg"/>
       <Paper style={styles.events.text} zDepth={0}>"Zimna automobilova sutaz, nielen pre profesionalnych jazdcov, zaradena do podujatia MRC 2018."</Paper>
-    <RaisedButton containerElement={<Link to = "/EventRegistration" />} label="Registration" secondary={true}/>
+    <RaisedButton containerElement={<Link to = "/EventRegistration" />} label="Registrovať sa" secondary={true}/>
       </Paper>
       </List>
     </div>);

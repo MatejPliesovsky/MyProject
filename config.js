@@ -9,4 +9,4 @@ config.admin.email="matej.pliesovsky@globallogic.com";
 config.app.name="Register Portal";
 config.app.url="";
 
-module.exports=config
+module.exports=config;

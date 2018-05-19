@@ -20,8 +20,8 @@ export default class AppbarWithNav extends Component {
   render() {
     return (
       <div>
-        <AppBar title="Registration Portal" style={styles.pos} iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    iconElementRight={<FlatButton containerElement={<Link to="/"/>} label="Home"/>}/>
+        <AppBar title="Evidenčný portál" style={styles.pos} iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+    iconElementRight={<FlatButton containerElement={<Link to="/UserHomeScreen"/>} label="Domov"/>}/>
       </div>
     );
   }

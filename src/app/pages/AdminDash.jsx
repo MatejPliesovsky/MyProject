@@ -11,7 +11,7 @@ export default class AdminDash extends React.Component {
     return (<MuiThemeProvider>
       <div>
         <Default/>
-        <SideBar/>
+      <SideBar />
         <MyTabsA/>
       </div>
     </MuiThemeProvider>);

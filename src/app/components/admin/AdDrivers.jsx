@@ -78,8 +78,8 @@ class AdDrivers extends Component {
         <TableHeader displaySelectAll={this.state.showCheckboxes} adjustForCheckbox={this.state.showCheckboxes} enableSelectAll={this.state.enableSelectAll}>
           <TableRow>
             <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
-          <TableHeaderColumn tooltip="The Full Name">First Name and Last Name</TableHeaderColumn>
-            <TableHeaderColumn tooltip="The Team">Team</TableHeaderColumn>
+          <TableHeaderColumn tooltip="The Full Name">Meno a Priezvisko</TableHeaderColumn>
+        <TableHeaderColumn tooltip="The Team">Tím</TableHeaderColumn>
             <TableHeaderColumn ></TableHeaderColumn>
           </TableRow>
         </TableHeader>

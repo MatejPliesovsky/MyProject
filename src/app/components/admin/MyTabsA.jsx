@@ -32,10 +32,10 @@ export default class MyTabsA extends React.Component {
   render() {
     return (<div style={styles.pos}>
       <Tabs onChange={this.handleChange} value={this.state.slideIndex}>
-        <Tab label="Drivers" value={0}/>
-        <Tab label="Co-Drivers" value={1}/>
-        <Tab label="Cars" value={2}/>
-        <Tab label="Events" value={3}/>
+        <Tab label="Jazdci" value={0}/>
+      <Tab label="Spolujazdci" value={1}/>
+    <Tab label="Vozidlá" value={2}/>
+  <Tab label="Podujatia" value={3}/>
       </Tabs>
       <SwipeableViews index={this.state.slideIndex} onChangeIndex={this.handleChange}>
         <AdDrivers/>

@@ -16,11 +16,11 @@ export default class Login extends React.Component {
     return (<div>
       <div>
         <List>
-          <Paper style={styles.login.bgPaper} zDepth={2}><ListItem primaryText="Prihlasenie"/>
-            <TextField hintText="Username"/><br/>
-            <TextField hintText="Password"/>
-            <RaisedButton containerElement={<Link to = "/UserHomeScreen" />} label="Submit" primary={true} style={styles.login.submit}/>
-            <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Cancel" primary={true} style={styles.login.cancel}/>
+          <Paper style={styles.login.bgPaper} zDepth={2}><ListItem primaryText="Prihlásenie"/>
+        <TextField hintText="Prihlasovacie meno"/><br/>
+      <TextField hintText="Heslo"/>
+    <RaisedButton containerElement={<Link to = "/UserHomeScreen" />} label="Potvrdiť" primary={true} style={styles.login.submit}/>
+  <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Zrušiť" primary={true} style={styles.login.cancel}/>
             <img style={styles.login.disImig} src={png}/>
           </Paper>
         </List>

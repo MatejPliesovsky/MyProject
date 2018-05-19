@@ -10,7 +10,6 @@ Start the development server with this command:
 ```
 npm start
 ```
-
 Setup
 ---
 
@@ -20,4 +19,4 @@ Compile
 ```
 npm run compile
 ```
-"# MyProject" 
+"# MyProject"
