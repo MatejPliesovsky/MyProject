@@ -11,6 +11,7 @@ import profile from './profile.js';
 import team from './team.js';
 import carsedit from './carsedit.js';
 import eventregcomp from './eventregcomp.js';
+import decomp from './decomp.js';
 
 export default {
     main,
@@ -18,6 +19,7 @@ export default {
     codriver,
     car,
     events,
+    decomp,
     login,
     homeevents,
     homescreen,

@@ -65,7 +65,7 @@ class Profile extends Component {
 <Dialog actions={actions} modal={false} open={this.state.open} onRequestClose={this.handleClose}>  Discard changes?
   </Dialog>
       <List>
-        <Paper style={styles.profile.profileTable} zDepth={2}>
+        <Paper style={styles.profile.profileTable} zDepth={0}>
           <div style={styles.profile.text}>
             <TextField value={this.state.user.firstname}/><br/>
             <TextField value={this.state.user.lastname}/><br/>

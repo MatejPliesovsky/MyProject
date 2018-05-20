@@ -1,9 +1,9 @@
 export default {
   position: {
-    marginTop: -650
+    marginTop:20
   },
   content: {
-    marginLeft: 70
+    marginLeft: 60
   },
 
   headline: {

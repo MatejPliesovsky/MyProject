@@ -44,7 +44,7 @@ class CarsEdit extends Component {
       <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Submit" primary={true} style={styles.carsedit.save}/>
     <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Cancel" secondary={true} style={styles.carsedit.cancel}/>
       <List>
-        <Paper style={styles.carsedit.profileTable} zDepth={2}>
+        <Paper style={styles.carsedit.profileTable} zDepth={0}>
           <div style={styles.carsedit.text}>
             <TextField id="text-field-default" defaultValue="Brand" /><br />
               <TextField id="text-field-default" defaultValue="Model" /><br />

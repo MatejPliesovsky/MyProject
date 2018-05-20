@@ -14,9 +14,7 @@ import Car from './Car.jsx';
 
 const styles = {
   pos: {
-    marginTop: -44.2 + '%',
-    marginLeft: 54,
-    width: 96.47 + '%'
+    width: 100 + '%'
   },
   slide: {
     padding: 10

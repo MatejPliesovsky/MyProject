@@ -3,7 +3,6 @@ import {render} from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Default2 from '../layouts/Default2.jsx';
-import SideBar from '../components/SideBar.jsx';
 import EventsComp from '../components/EventsComp.jsx';
 
 export default class Events extends React.Component {
@@ -11,8 +10,7 @@ export default class Events extends React.Component {
     return (<MuiThemeProvider>
       <div>
         <Default2/>
-      <SideBar />
-        <EventsComp/>
+          <EventsComp/>
       </div>
     </MuiThemeProvider>);
   }

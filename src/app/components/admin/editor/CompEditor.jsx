@@ -10,9 +10,7 @@ import CarsEdit from './CarsEdit.jsx';
 const styles = {
   pos: {
     position:'fix',
-    marginTop: -44.2 + '%',
-    marginLeft: 54,
-    width: 96.47 + '%'
+    width: 100 + '%'
   }
 };
 

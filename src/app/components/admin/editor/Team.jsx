@@ -44,7 +44,7 @@ class Team extends Component {
       <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Submit" primary={true} style={styles.team.save}/>
     <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Cancel" secondary={true} style={styles.team.cancel}/>
       <List>
-        <Paper style={styles.team.profileTable} zDepth={2}>
+        <Paper style={styles.team.profileTable} zDepth={0}>
           <div style={styles.team.text}>
             <TextField id="text-field-default" defaultValue="First name"/><br/>
             <TextField id="text-field-default" defaultValue="Last name"/><br/>

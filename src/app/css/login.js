@@ -2,10 +2,9 @@ export default {
   bgPaper: {
     height: 220,
     width: 480,
-    marginTop: -44 + '%',
+    marginTop: -34 + '%',
     marginLeft: 60 + '%',
     marginBottom: 0 + '%',
-    marginRight: 18 + '%',
     textAlign: 'center',
     display: 'inline-block',
     backgroundColor: '#F0F4C3'

@@ -8,7 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 const styles={
     pos:{
-      width:100+'%',
+      width:100+'%'
     },
 }
 

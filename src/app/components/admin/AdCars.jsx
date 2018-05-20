@@ -133,10 +133,10 @@ class AdCars extends Component {
       <TableRowColumn>{row.gear}</TableRowColumn>
       <TableRowColumn>
         <div>
-          <IconButton iconStyle={styles.smallIcon}>
+          <IconButton iconStyle={styles.smallIcon} containerElement={<Link to="/Editor"/>}>
             <Edit/>
           </IconButton>
-          <IconButton iconStyle={styles.smallIcon} containerElement={<Link to="/Editor"/>}>
+          <IconButton iconStyle={styles.smallIcon}>
             <Delete/>
           </IconButton>
         </div>
