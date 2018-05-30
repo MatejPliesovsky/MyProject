@@ -11,32 +11,30 @@ import {
 } from 'material-ui/Table';
 import IconButton from 'material-ui/IconButton';
 import Edit from 'material-ui/svg-icons/editor/mode-edit';
-import Delete from 'material-ui/svg-icons/action/delete';
 
 const styles = {
   smallIcon: {
     width: 26,
     height: 26
-  },
+  }
 };
-
 
 const tableData = [
   {
     date: '3.1.2018',
-    event: 'Zimna Levoca',
+    event: 'Zimná Levoča',
     kategory: 'MRC'
   }, {
     date: '4.2.2018',
-    event: 'Dobsinska Zima',
+    event: 'Dobšinská zima',
     kategory: 'MRC'
   }, {
     date: '10.3.2018',
-    event: 'West-Lake Race Cestice',
+    event: 'Maad Rally Cestice',
     kategory: 'MTEcup'
   }, {
-    date: '8.4.2018',
-    event: 'West-Lake Cup Bankov',
+    date: '8.5.2018',
+    event: 'Rebuy Stars Rally Bankov',
     kategory: 'MTEcup'
   }, {
     date: '8.6.2018',
@@ -62,9 +60,9 @@ class AdEvents extends Component {
         <TableHeader displaySelectAll={this.state.showCheckboxes} adjustForCheckbox={this.state.showCheckboxes} enableSelectAll={this.state.enableSelectAll}>
           <TableRow>
             <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
-          <TableHeaderColumn tooltip="The Date">Dátum</TableHeaderColumn>
-        <TableHeaderColumn tooltip="The Event">Podujatie</TableHeaderColumn>
-      <TableHeaderColumn tooltip="The Kategory">Kategória</TableHeaderColumn>
+            <TableHeaderColumn tooltip="The Date">Dátum</TableHeaderColumn>
+            <TableHeaderColumn tooltip="The Event">Podujatie</TableHeaderColumn>
+            <TableHeaderColumn tooltip="The Kategory">Kategória</TableHeaderColumn>
             <TableHeaderColumn ></TableHeaderColumn>
           </TableRow>
         </TableHeader>
@@ -77,11 +75,8 @@ class AdEvents extends Component {
               <TableRowColumn>{row.kategory}</TableRowColumn>
               <TableRowColumn>
                 <div>
-                  <IconButton iconStyle={styles.smallIcon}>
+                  <IconButton iconStyle={styles.smallIcon} containerElement={<Link to = "/Editor" />}>
                     <Edit/>
-                  </IconButton>
-                  <IconButton iconStyle={styles.smallIcon} containerElement={<Link to="/Editor"/>}>
-                    <Delete/>
                   </IconButton>
                 </div>
               </TableRowColumn>

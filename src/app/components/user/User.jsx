@@ -39,7 +39,7 @@ class User extends Component {
   render() {
     return (<div style={styles.user.posFields}>
       <h2 >Profil jazdca</h2>
-    Tu môžete upraviť svoj profil.<br/>
+      Tu môžete upraviť svoj profil.<br/>
       <TextField value={this.state.user.firstname}/><br/>
       <TextField value={this.state.user.lastname}/><br/>
       <TextField value={this.state.user.dob}/><br/>
@@ -49,7 +49,7 @@ class User extends Component {
       <TextField value={this.state.user.state}/><br/>
       <TextField value={this.state.user.drivinglicence}/><br/>
       <img style={styles.user.circular} src="http://profile.actionsprout.com/default.jpeg"/>
-    <RaisedButton label="Nahrať fotku" labelPosition="before" style={styles.user.upload} containerElement="label"><input type="file" style={styles.user.imgInput}/></RaisedButton>
+      <RaisedButton label="Nahrať fotku" labelPosition="before" style={styles.user.upload} containerElement="label"><input type="file" style={styles.user.imgInput}/></RaisedButton>
     </div>);
   }
 }

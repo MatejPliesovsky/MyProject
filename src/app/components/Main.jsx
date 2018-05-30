@@ -5,13 +5,11 @@ import DefaultLayout from '../layouts/Default.jsx';
 
 class Main extends React.Component {
   render() {
-    return (
-       <MuiThemeProvider muiTheme={muiTheme}>
-        <DefaultLayout>
-            <div>{this.props.children}</div>
-        </DefaultLayout>
-        </MuiThemeProvider>
-    );
+    return (<MuiThemeProvider muiTheme={muiTheme}>
+      <DefaultLayout>
+        <div>{this.props.children}</div>
+      </DefaultLayout>
+    </MuiThemeProvider>);
   }
 }
 export default Main;

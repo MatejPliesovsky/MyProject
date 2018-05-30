@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 
 class User extends Component {
@@ -14,15 +14,11 @@ class User extends Component {
   }
 
   fetchUsers() {
-    axios.get('/users')
-      .then( (response) => {
-        this.setState({
-          user: response.data
-        });
-      })
-      .catch( (error) => {
-        console.log(error);
-      });
+    axios.get('/users').then((response) => {
+      this.setState({user: response.data});
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
   componentWillMount() {
@@ -30,11 +26,9 @@ class User extends Component {
   }
 
   render() {
-    return (
-      <div className="user">
-        <h1>Hello {this.state.user.name}</h1>
-      </div>
-    );
+    return (<div className="user">
+      <h1>Hello {this.state.user.name}</h1>
+    </div>);
   }
 }
 

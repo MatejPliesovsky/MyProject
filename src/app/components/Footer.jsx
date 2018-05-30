@@ -4,10 +4,10 @@ const styles = {
   footer: {
     position: 'absolute',
     bottom: 0,
-    padding: 1+'%',
+    padding: 1 + '%',
     width: 98 + '%',
-    textAlign:'center',
-  },
+    textAlign: 'center'
+  }
 };
 
 export default class Footer extends Component {
@@ -16,11 +16,9 @@ export default class Footer extends Component {
   }
 
   render() {
-    return(
-      <div style={styles.footer}>
-        RegPortal © 2018
-      </div>
-    );
+    return (<div style={styles.footer}>
+      RegPortal © 2018
+    </div>);
   }
 
 }

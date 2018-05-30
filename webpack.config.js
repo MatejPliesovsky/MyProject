@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 var debug = require('debug');
+require("babel-core/register");
+require("babel-polyfill");
 // var proxy = require('http-proxy-middleware');
 
 var BUILD_DIR = path.resolve(__dirname, 'src/public');
@@ -11,7 +13,7 @@ var config = {
   devtool: debug
     ? "inline-sourcemap"
     : false,
-  entry: APP_DIR + '/index.jsx',
+  entry: ['babel-polyfill', APP_DIR + '/index.jsx'],
   output: {
     path: BUILD_DIR,
     filename: "client.min.js"

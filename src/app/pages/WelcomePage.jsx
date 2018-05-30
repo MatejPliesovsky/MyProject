@@ -7,7 +7,9 @@ import EventsList from '../components/EventsList.jsx';
 import Login from '../components/Login.jsx';
 
 export default class WelcomePage extends React.Component {
-  render() {
+  render(props) {
+    console.log('this.props');
+    console.log(this.props);
     return (<MuiThemeProvider>
       <div>
         <Default/>

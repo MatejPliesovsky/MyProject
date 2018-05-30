@@ -4,7 +4,6 @@ export default {
     width: 480,
     marginTop: -34 + '%',
     marginLeft: 60 + '%',
-    marginBottom: 0 + '%',
     textAlign: 'center',
     display: 'inline-block',
     backgroundColor: '#F0F4C3'
@@ -24,7 +23,7 @@ export default {
     marginBottom: 0 + '%',
   },
   disImig: {
-    marginTop:50,
+    marginTop:30 + '%',
     marginLeft:-165,
   }
 };

@@ -32,17 +32,17 @@ class CoDriver extends Component {
   render() {
     return (<div style={styles.codriver.posFields}>
       <h2>Profil spolujzdca</h2>
-    Tu môžete upraviť profil spolujazdca.<br/>
-    <TextField id="text-field-default" defaultValue="Meno"/><br/>
-  <TextField id="text-field-default" defaultValue="Priezvisko"/><br/>
-<TextField id="text-field-default" defaultValue="Dátum narodenia"/><br/>
+      Tu môžete upraviť profil spolujazdca.<br/>
+      <TextField id="text-field-default" defaultValue="Meno"/><br/>
+      <TextField id="text-field-default" defaultValue="Priezvisko"/><br/>
+      <TextField id="text-field-default" defaultValue="Dátum narodenia"/><br/>
       <TextField id="text-field-default" defaultValue="Ulica a číslo"/><br/>
-    <TextField id="text-field-default" defaultValue="Mesto"/><br/>
-  <TextField id="text-field-default" defaultValue="PSČ"/><br/>
-<TextField id="text-field-default" defaultValue="Štát"/><br/>
+      <TextField id="text-field-default" defaultValue="Mesto"/><br/>
+      <TextField id="text-field-default" defaultValue="PSČ"/><br/>
+      <TextField id="text-field-default" defaultValue="Štát"/><br/>
       <TextField id="text-field-default" defaultValue="Licencia"/><br/>
       <img style={styles.codriver.circular} src="http://profile.actionsprout.com/default.jpeg"/>
-    <RaisedButton label="Nahrať fotku" labelPosition="before" style={styles.codriver.upload} containerElement="label"><input type="file" style={styles.codriver.imgInput}/></RaisedButton>
+      <RaisedButton label="Nahrať fotku" labelPosition="before" style={styles.codriver.upload} containerElement="label"><input type="file" style={styles.codriver.imgInput}/></RaisedButton>
     </div>);
   }
 }

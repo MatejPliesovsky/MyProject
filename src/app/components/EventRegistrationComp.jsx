@@ -14,7 +14,7 @@ export default class EventRegistrationComp extends React.Component {
   render() {
     return (<div>
       <RaisedButton containerElement={<Link to = "/Details" />} label="Odoslať" primary={true} style={styles.eventregcomp.submit}/>
-    <RaisedButton containerElement={<Link to = "/Details" />} label="Zrušiť" secondary={true} style={styles.eventregcomp.cancel}/>
+      <RaisedButton containerElement={<Link to = "/Details" />} label="Zrušiť" secondary={true} style={styles.eventregcomp.cancel}/>
       <div style={styles.eventregcomp.evRegTab}>
         <div style={styles.eventregcomp.topText}>Registration</div>
         <ListItem primaryText="Údaje o jazdcovi"/>
@@ -38,7 +38,7 @@ export default class EventRegistrationComp extends React.Component {
         <TextField hintText="Mesto"/><br/>
         <TextField hintText="PSČ"/>
         <TextField hintText="Štát"/><br/>
-      <br/>
+        <br/>
       </div>
       <div style={styles.eventregcomp.evRegTabCar}>
         <ListItem primaryText="Údaje o vozidle"/>

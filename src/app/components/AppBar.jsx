@@ -13,16 +13,25 @@ const styles = {
 }
 
 export default class AppbarWithNav extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
   render() {
-    return (
-      <div>
-        <AppBar title="Evidenčný portál" style={styles.pos} iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    iconElementRight={<FlatButton containerElement={<Link to="/SignUp"/>} label="Registrácia"/>}/>
-      </div>
-    );
+    let authenticated = window.sessionStorage.getItem("authenticated") === "true"
+      ? true
+      : false;
+    return (<div>
+      <AppBar title="Evidenčný portál" style={styles.pos} iconElementRight={<FlatButton containerElement = {
+          <Link to={authenticated
+                ? "/UserDash"
+                : "/SignUp"}/>
+        }
+        label = {
+          authenticated
+            ? "Nastavenia"
+            : "Registrácia"
+        } />}/>
+    </div>);
   }
-  }
+}

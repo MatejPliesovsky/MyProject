@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import LoginForm from './LoginForm.jsx';
 import png from './images/race.png'
 
 import styles from '../css';
@@ -16,16 +17,13 @@ export default class Login extends React.Component {
     return (<div>
       <div>
         <List>
-          <Paper style={styles.login.bgPaper} zDepth={2}><ListItem primaryText="Prihlásenie"/>
-        <TextField hintText="Prihlasovacie meno"/><br/>
-      <TextField hintText="Heslo"/>
-    <RaisedButton containerElement={<Link to = "/UserHomeScreen" />} label="Potvrdiť" primary={true} style={styles.login.submit}/>
-  <RaisedButton containerElement={<Link to = "/AdminDash" />} label="Zrušiť" primary={true} style={styles.login.cancel}/>
+          <Paper style={styles.login.bgPaper} zDepth={2}>
+            <ListItem primaryText="Prihlásenie"/>
+            <LoginForm/>
             <img style={styles.login.disImig} src={png}/>
           </Paper>
         </List>
       </div>
-      <div></div>
     </div>);
   }
 }

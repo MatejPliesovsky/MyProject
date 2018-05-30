@@ -74,13 +74,8 @@ class EventsComp extends Component {
       <List>
         <Paper style={styles.events.eventTables} zDepth={0}>
           <div>
-            <Table fixedHeader={this.state.fixedHeader}
-              fixedFooter={this.state.fixedFooter}
-              selectable={this.state.selectable}
-              multiSelectable={this.state.multiSelectable}>
-              <TableHeader displaySelectAll={this.state.showCheckboxes}
-                adjustForCheckbox={this.state.showCheckboxes}
-                enableSelectAll={this.state.enableSelectAll}>
+            <Table fixedHeader={this.state.fixedHeader} fixedFooter={this.state.fixedFooter} selectable={this.state.selectable} multiSelectable={this.state.multiSelectable}>
+              <TableHeader displaySelectAll={this.state.showCheckboxes} adjustForCheckbox={this.state.showCheckboxes} enableSelectAll={this.state.enableSelectAll}>
                 <TableRow style={styles.events.headTop}>
                   <TableHeaderColumn tooltip="The Date">Dátum</TableHeaderColumn>
                   <TableHeaderColumn tooltip="The Event">Podujatie</TableHeaderColumn>
@@ -88,10 +83,7 @@ class EventsComp extends Component {
                   <TableHeaderColumn ></TableHeaderColumn>
                 </TableRow>
               </TableHeader>
-              <TableBody displayRowCheckbox={this.state.showCheckboxes}
-                deselectOnClickaway={this.state.deselectOnClickaway}
-                showRowHover={this.state.showRowHover}
-                stripedRows={this.state.stripedRows}>
+              <TableBody displayRowCheckbox={this.state.showCheckboxes} deselectOnClickaway={this.state.deselectOnClickaway} showRowHover={this.state.showRowHover} stripedRows={this.state.stripedRows}>
                 {
                   tableData.map((row, index) => (<TableRow key={index}>
                     <TableRowColumn>{row.date}</TableRowColumn>
@@ -99,7 +91,7 @@ class EventsComp extends Component {
                     <TableRowColumn>{row.kategory}</TableRowColumn>
                     <TableRowColumn>
                       <div>
-                        <RaisedButton containerElement={<Link to = "/Details"/>} label="Detaily" style={styles.btnGround} />
+                        <RaisedButton containerElement={<Link to = "/Details" />} label="Detaily" style={styles.btnGround}/>
                       </div>
                     </TableRowColumn>
                   </TableRow>))

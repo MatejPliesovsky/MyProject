@@ -10,8 +10,8 @@ import AdEvents from './AdEvents.jsx';
 
 const styles = {
   pos: {
-    width: 100 + '%',
-  },
+    width: 100 + '%'
+  }
 };
 
 export default class MyTabsA extends React.Component {
@@ -31,9 +31,9 @@ export default class MyTabsA extends React.Component {
     return (<div style={styles.pos}>
       <Tabs onChange={this.handleChange} value={this.state.slideIndex}>
         <Tab label="Jazdci" value={0}/>
-      <Tab label="Spolujazdci" value={1}/>
-    <Tab label="Vozidlá" value={2}/>
-  <Tab label="Podujatia" value={3}/>
+        <Tab label="Spolujazdci" value={1}/>
+        <Tab label="Vozidlá" value={2}/>
+        <Tab label="Podujatia" value={3}/>
       </Tabs>
       <SwipeableViews index={this.state.slideIndex} onChangeIndex={this.handleChange}>
         <AdDrivers/>
