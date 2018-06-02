@@ -20,31 +20,6 @@ const styles = {
   }
 };
 
-// const tableData = [
-//   {
-//     name: 'Roman Tutko',
-//     Team: 'PDautosport'
-//   }, {
-//     name: 'Tomas Valusek',
-//     Team: 'Valusek motorsport'
-//   }, {
-//     name: 'Jan Maslej',
-//     Team: 'QaM Racing'
-//   }, {
-//     name: 'Zdenka Fryvaldska',
-//     Team: 'Rally-Sports.sk'
-//   }, {
-//     name: 'Marian Macej',
-//     Team: 'Rally-Foto'
-//   }, {
-//     name: 'Viliam Pitonak',
-//     Team: 'Sting motorsport'
-//   }, {
-//     name: 'Lukas Branisa',
-//     Team: 'Branisa motorsport'
-//   }
-// ];
-
 class AdDrivers extends Component {
   state = {
     fixedHeader: true,
