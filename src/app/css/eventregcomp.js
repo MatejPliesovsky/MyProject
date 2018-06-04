@@ -8,9 +8,17 @@ export default {
   },
   evRegTab: {
     height: 500,
-    width: 800,
+    width: 170,
     marginTop: -4 + '%',
-    marginLeft: 1 + '%',
+    marginLeft: 5 + '%',
+    marginRight: 10 + '%',
+    textAlign: 'center'
+  },
+  evRegCoDriverTab: {
+    height: 500,
+    width: 190,
+    marginTop: -28 + '%',
+    marginLeft: 40 + '%',
     marginRight: 10 + '%',
     textAlign: 'center'
   },
@@ -20,18 +28,21 @@ export default {
     marginTop: 1 + '%',
     marginLeft: 1 + '%',
   },
-  cancel: {
+  back: {
     width: 100,
     height: 40,
-    marginLeft: 2 + '%',
+    marginTop: 2,
   },
   evRegTabCar: {
       height: 400,
-      width: 700,
-      marginTop: -28.5 + '%',
-      marginLeft: 50 + '%',
+      width: 170,
+      marginTop: -32.9 + '%',
+      marginLeft: 70 + '%',
       marginBottom: 0 + '%',
       marginRight: 10 + '%',
       textAlign: 'center'
+    },
+    submit:{
+      marginLeft:10,
     },
 };

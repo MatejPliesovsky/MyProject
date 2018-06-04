@@ -8,9 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import axios from 'axios';
 
 import TextField from '../ff-mui/TextField';
-import PasswordField from '../ff-mui/PasswordField';
 import HiddenField from '../ff-mui/HiddenField';
-import LogoutButton from '../LogoutButton.jsx';
 import styles from '../../css';
 
 const doInsert = values => axios.post('/insert', values).then((response) => {
@@ -33,6 +31,7 @@ const onSubmit = async values => {
 }
 
 const CoDriver = ({initialData}) => {
+  console.log(initialData);
   let authenticated = window.sessionStorage.getItem("authenticated");
 
   if (authenticated === "true")
@@ -54,7 +53,7 @@ const CoDriver = ({initialData}) => {
             <Field id="co_email" name="co_email" component={TextField} placeholder="E-mail"/>
             <Field id="co_team" name="co_team" component={TextField} placeholder="Tím"/><br/>
             <Field id="co_drivinglicence" name="co_drivinglicence" component={TextField} placeholder="Číslo vodičského preukazu"/>
-            <Field name="_id" component={HiddenField}/><br/> {/* <input type hidden user_id={_id} component={TextField} placeholder="Tím"/><br/> */}<br/>
+            <Field name="_id" component={HiddenField}/><br/> <br/>
             <img style={styles.codriver.circular} src="http://profile.actionsprout.com/default.jpeg"/>
             <RaisedButton label="Nahrať fotku" labelPosition="before" style={styles.codriver.upload} containerElement="label"><input type="file" style={styles.codriver.imgInput}/></RaisedButton>
 

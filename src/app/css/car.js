@@ -14,7 +14,7 @@ export default {
     backgroundColor: '#43A047'
   },
   carsIm:{
-    marginTop:-240,
+    marginTop:-400,
     marginLeft:500,
     width:480,
     height:210,
@@ -25,7 +25,7 @@ export default {
   },
   upload: {
     marginLeft:607,
-    marginTop:-40,
+    marginTop:-185,
     width: 260,
   },
   imgInput:{

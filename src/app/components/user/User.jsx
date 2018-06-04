@@ -9,7 +9,6 @@ import axios from 'axios';
 
 import TextField from '../ff-mui/TextField';
 import PasswordField from '../ff-mui/PasswordField';
-import LogoutButton from '../LogoutButton.jsx';
 import styles from '../../css';
 
 const doUpdate = values => axios.post('/update', values).then((response) => {

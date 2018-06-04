@@ -12,17 +12,13 @@ router.post('/', function(req, res) {
   const {
     login,
     user_id,
-    co_firstname,
-    co_lastname,
-    co_dob,
-    co_street,
-    co_city,
-    co_zip,
-    co_state,
-    co_phone,
-    co_email,
-    co_team,
-    co_drivinglicence,
+    manufacturer,
+    carmodel,
+    enginevalue,
+    power,
+    turbo,
+    gear,
+    evidence_number
   } = req.body;
   MongoClient.connect(url, (err, client) => {
     let db = client.db('drivers');
@@ -33,17 +29,13 @@ router.post('/', function(req, res) {
       },{$set:{
         session_id,
         user_id,
-        co_firstname,
-        co_lastname,
-        co_dob,
-        co_street,
-        co_city,
-        co_zip,
-        co_state,
-        co_phone,
-        co_email,
-        co_team,
-        co_drivinglicence,
+        manufacturer,
+        carmodel,
+        enginevalue,
+        power,
+        turbo,
+        gear,
+        evidence_number
       }})
         res.json({inserted: true});
       }

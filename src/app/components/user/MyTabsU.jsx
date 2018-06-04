@@ -5,7 +5,6 @@ import Paper from 'material-ui/Paper';
 import {List, ListItem} from 'material-ui/List';
 import SwipeableViews from 'react-swipeable-views';
 import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import axios from 'axios';
 import User from './User.jsx';
@@ -66,10 +65,6 @@ export default class MyTabsU extends React.Component {
  }
   render() {
     const {user}=this.state;
-    const actions = [
-      <FlatButton label="Zrušiť" primary={true} onClick={this.handleClose}/>,
-      <FlatButton label="Uložiť" primary={true} linkButton={true} onClick={this.handleClose} href="/UserHomeScreen"/>
-    ];
 
     return (<div style={styles.pos}>
       <Tabs onChange={this.handleChange} value={this.state.slideIndex}>
@@ -78,10 +73,7 @@ export default class MyTabsU extends React.Component {
         <Tab label="Vozidlo" value={2}/>
       </Tabs>
       <RaisedButton label="Späť" secondary={true} style={styles.cancel} containerElement={<Link to = "/UserHomeScreen" />}/>
-      <Dialog actions={actions} modal={false} open={this.state.open} onRequestClose={this.handleClose}>
-        Uložiť zmeny?
-      </Dialog>
-
+      
       <SwipeableViews index={this.state.slideIndex} onChangeIndex={this.handleChange}>
 
         <User initialData = {user}/>
@@ -90,7 +82,7 @@ export default class MyTabsU extends React.Component {
         </div>
 
         <div style={styles.slide}>
-          <Car/>
+          <Car initialData = {user}/>
         </div>
 
       </SwipeableViews>
