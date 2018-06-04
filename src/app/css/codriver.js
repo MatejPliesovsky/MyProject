@@ -17,8 +17,8 @@ export default {
     borderRadius: 100 + '%'
   },
   upload: {
-    marginLeft:765,
-    marginTop:-160,
+    marginLeft: 765,
+    marginTop: -160,
     width: 260
   },
   imgInput: {
@@ -31,7 +31,7 @@ export default {
     width: '100%',
     opacity: 0
   },
-  submit:{
-    marginLeft:-432,
+  submit: {
+    marginLeft: -432
   }
 };

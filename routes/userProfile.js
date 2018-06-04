@@ -14,8 +14,6 @@ router.get('/isAuthenticated', function(req, res, next) {
     let db = client.db('drivers');
     var cursor = db.collection('users').find({session_id: sessionID}).toArray(function(error, users) {
       let user = users[0];
-      console.log('user');
-      console.log(user);
       res.end(JSON.stringify({
         authenticated: user
           ? true
@@ -27,18 +25,12 @@ router.get('/isAuthenticated', function(req, res, next) {
 
 router.get('/loadUserData', function(req, res, next) {
 
- // if(!req.session.authenticated) return res.end();
-
   let sessionID = req.sessionID;
-  console.log('sessionID');
-  console.log(sessionID);
   MongoClient.connect(url, (err, client) => {
     let db = client.db('drivers');
     var cursor = db.collection('users').find({session_id: sessionID}).toArray(function(error, users) {
       let user = users[0];
       if (user) {
-        console.log(`profile`);
-        console.log(user);
         res.json(user);
       }
       else {
@@ -47,27 +39,9 @@ router.get('/loadUserData', function(req, res, next) {
       }
     );
   });
-  // res.send();
 });
 
 router.post('/update', function(req, res, next) {
 
-  // if(!req.session.authenticated) res.end();
-
-  // let sessionID = req.sessionID;
-  // MongoClient.connect(url, (err, client) => {
-  //   let db = client.db('drivers')
-  //   var cursor = db.collection('users').
-  //   find({session_id: sessionID}).toArray(function(error, users){
-  //     let user = users[0];
-  //     if(user) {
-  //       console.log(`profile`);
-  //       console.log(user);
-  //       res.json(user);
-  //     }
-  //     else res.json({error: "Access denied"});
-  //   });
-  // });
-  // res.send();
 });
 module.exports = router;

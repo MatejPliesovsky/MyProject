@@ -8,8 +8,6 @@ import Login from '../components/Login.jsx';
 
 export default class WelcomePage extends React.Component {
   render(props) {
-    console.log('this.props');
-    console.log(this.props);
     return (<MuiThemeProvider>
       <div>
         <Default/>

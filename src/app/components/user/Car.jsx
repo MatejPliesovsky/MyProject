@@ -13,7 +13,6 @@ import HiddenField from '../ff-mui/HiddenField';
 import styles from '../../css';
 
 const doInsertCar = values => axios.post('/insertcar', values).then((response) => {
-  console.log(response);
   if (response.data && response.data.login) {
     const login = response.data.login;
     window.sessionStorage.setItem("authenticated", true);
@@ -32,7 +31,6 @@ const onSubmit = async values => {
 }
 
 const Car = ({initialData}) => {
-  console.log(initialData);
   let authenticated = window.sessionStorage.getItem("authenticated");
 
   if (authenticated === "true")

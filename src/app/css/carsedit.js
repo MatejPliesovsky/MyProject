@@ -2,26 +2,26 @@ export default {
   slide: {
     padding: 10
   },
-  profileTable:{
+  profileTable: {
     height: 500,
     width: 100 + '%',
-    display: 'inline-block',
+    display: 'inline-block'
   },
-  carsIm:{
-    marginTop:-240,
-    marginLeft:500,
-    width:480,
-    height:210,
-    borderRadius:5+'%'
+  carsIm: {
+    marginTop: -240,
+    marginLeft: 500,
+    width: 480,
+    height: 210,
+    borderRadius: 5 + '%'
   },
-  text:{
-    marginTop:10,
-    marginLeft:20,
+  text: {
+    marginTop: 10,
+    marginLeft: 20
   },
-  save:{
-    margin:10,
+  save: {
+    margin: 10
   },
-  cancel:{
-    margin:10,
-  },
+  cancel: {
+    margin: 10
+  }
 };

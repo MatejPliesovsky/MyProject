@@ -6,7 +6,7 @@ import Default2 from '../layouts/Default2.jsx';
 import HomeScreenComp from '../components/HomeScreenComp.jsx';
 
 export default class UserHomeScreen extends React.Component {
-  render() {console.log(this.props);
+  render() {
     return (<MuiThemeProvider>
       <div>
         <Default2/>

@@ -33,7 +33,7 @@ export default class MyTabsU extends React.Component {
     this.state = {
       slideIndex: 0,
       open: false,
-      user:null
+      user: null
     };
   }
 
@@ -48,23 +48,19 @@ export default class MyTabsU extends React.Component {
   handleClose = () => {
     this.setState({open: false});
   };
- componentWillMount(){
-   axios.get('/userProfile/loadUserData').then((response) => {
-     console.log(response.data.authenticated);
-     if(response.data.authenticated === false) {
+  componentWillMount() {
+    axios.get('/userProfile/loadUserData').then((response) => {
+      if (response.data.authenticated === false) {
         window.sessionStorage.setItem("authenticated", false);
-        window.location="/";
-     }
-    // window.sessionStorage.setItem("authenticated", true);
-     console.log('response');
-     console.log(response);
-     this.setState({user:response.data});
-   }).catch((error) => {
-     console.log(error);
-   });;
- }
+        window.location = "/";
+      }
+      this.setState({user: response.data});
+    }).catch((error) => {
+      console.log(error);
+    });;
+  }
   render() {
-    const {user}=this.state;
+    const {user} = this.state;
 
     return (<div style={styles.pos}>
       <Tabs onChange={this.handleChange} value={this.state.slideIndex}>
@@ -73,16 +69,16 @@ export default class MyTabsU extends React.Component {
         <Tab label="Vozidlo" value={2}/>
       </Tabs>
       <RaisedButton label="Späť" secondary={true} style={styles.cancel} containerElement={<Link to = "/UserHomeScreen" />}/>
-      
+
       <SwipeableViews index={this.state.slideIndex} onChangeIndex={this.handleChange}>
 
-        <User initialData = {user}/>
+        <User initialData={user}/>
         <div style={styles.slide}>
-          <CoDriver initialData = {user}/>
+          <CoDriver initialData={user}/>
         </div>
 
         <div style={styles.slide}>
-          <Car initialData = {user}/>
+          <Car initialData={user}/>
         </div>
 
       </SwipeableViews>

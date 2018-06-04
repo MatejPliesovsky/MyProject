@@ -6,7 +6,6 @@ MongoClient.connect(dbUrl, function(err, db) {
     throw err;
   } else {
     database = db;
-    console.log('MongoDB connection successful');
     var testUser = {
      first_name: 'Roman',
      last_name:'Tutko'

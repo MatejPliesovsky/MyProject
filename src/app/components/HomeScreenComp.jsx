@@ -15,7 +15,6 @@ export default class HomeScreenComp extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (<center>
       <div style={styles.homescreen.position}>
         <div style={styles.homescreen.content}>

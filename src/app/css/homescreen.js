@@ -1,6 +1,6 @@
 export default {
   position: {
-    marginTop:20
+    marginTop: 20
   },
   content: {
     marginLeft: 60
@@ -28,15 +28,15 @@ export default {
   },
 
   daterange: {
-    margin:10,
+    margin: 10
   },
-  settings:{
-    margin:10,
+  settings: {
+    margin: 10
   },
-  cancel:{
-    margin:10
+  cancel: {
+    margin: 10
   },
-  disImig:{
-    width:550,
-  },
+  disImig: {
+    width: 550
+  }
 };

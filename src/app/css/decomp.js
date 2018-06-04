@@ -21,7 +21,7 @@ export default {
     marginBottom: 10 + '%',
     marginRight: 18 + '%',
     textAlign: 'center',
-    display: 'inline-block',
+    display: 'inline-block'
   },
   btnReg: {
     marginTop: 50,
@@ -31,13 +31,13 @@ export default {
     width: 26,
     height: 26
   },
-  registered:{
+  registered: {
     position: 'fixed',
     height: 600,
     width: 535,
-    marginTop: -40.1+'%',
+    marginTop: -40.1 + '%',
     marginLeft: 967,
     textAlign: 'center',
-    display: 'inline-block',
+    display: 'inline-block'
   }
 };

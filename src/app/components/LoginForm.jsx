@@ -9,10 +9,11 @@ import PasswordField from './ff-mui/PasswordField';
 import LogoutButton from './LogoutButton.jsx';
 
 const doLogin = values => axios.post('/login', values).then((response) => {
-  console.log(response);
   if (response.data && response.data.role) {
     const role = response.data.role;
-    const location = role === 'user' ? '/UserHomeScreen' : '/AdminDash';
+    const location = role === 'user'
+      ? '/UserHomeScreen'
+      : '/AdminDash';
     window.sessionStorage.setItem("role", role);
     window.document.location = location;
     window.sessionStorage.setItem("authenticated", true);
@@ -30,8 +31,6 @@ const onSubmit = async values => {
 }
 const LoginForm = () => {
   let authenticated = window.sessionStorage.getItem("authenticated");
-  console.log('authenticated form');
-  console.log(authenticated, typeof authenticated);
   if (authenticated === "true")
     return (<div>
       <div>Ste prihlasený</div>
@@ -60,15 +59,11 @@ const LoginForm = () => {
 
 export default compose(lifecycle({
   componentWillMount() {
-    console.log(":DidMount");
     axios.get('/userProfile/isAuthenticated').then((response) => {
       if (response.data.authenticated) {
         window.sessionStorage.setItem("authenticated", response.data.authenticated);
       }
     }).catch((error) => {
-      console.log(error);
     });;
-
-    console.log(this.props)
   }
 }))(LoginForm);

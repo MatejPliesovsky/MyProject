@@ -2,10 +2,10 @@ export default {
   slide: {
     padding: 10
   },
-  profileTable:{
+  profileTable: {
     height: 500,
     width: 100 + '%',
-    display: 'inline-block',
+    display: 'inline-block'
   },
   circular: {
     marginTop: -380,
@@ -14,14 +14,14 @@ export default {
     height: 240,
     borderRadius: 100 + '%'
   },
-  text:{
-    marginTop:10,
-    marginLeft:20,
+  text: {
+    marginTop: 10,
+    marginLeft: 20
   },
-  save:{
-    margin:10,
+  save: {
+    margin: 10
   },
-  cancel:{
-    margin:10,
-  },
+  cancel: {
+    margin: 10
+  }
 };

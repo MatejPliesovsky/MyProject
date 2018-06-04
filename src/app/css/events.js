@@ -11,5 +11,5 @@ export default {
   },
   headTop: {
     backgroundColor: '#FFF9C4'
-  },
+  }
 };

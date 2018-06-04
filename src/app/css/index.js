@@ -14,18 +14,18 @@ import eventregcomp from './eventregcomp.js';
 import decomp from './decomp.js';
 
 export default {
-    main,
-    user,
-    codriver,
-    car,
-    events,
-    decomp,
-    login,
-    homeevents,
-    homescreen,
-    signup,
-    profile,
-    team,
-    carsedit,
-    eventregcomp,
+  main,
+  user,
+  codriver,
+  car,
+  events,
+  decomp,
+  login,
+  homeevents,
+  homescreen,
+  signup,
+  profile,
+  team,
+  carsedit,
+  eventregcomp
 }

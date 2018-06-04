@@ -7,7 +7,7 @@ export default {
     marginBottom: 0 + '%',
     marginRight: 10 + '%',
     textAlign: 'center',
-    display: 'inline-block',
+    display: 'inline-block'
   },
   submit: {
     width: 100,
@@ -23,7 +23,7 @@ export default {
     marginLeft: 26 + '%',
     marginBottom: 0 + '%'
   },
-  captcha:{
-    marginLeft:30,
+  captcha: {
+    marginLeft: 30
   }
 };

@@ -56,7 +56,7 @@ class DeComp extends Component {
           <ListItem primaryText="Informácie o podujatí"/>
           <img style={styles.decomp.eventIm} src={png}/>
           <Paper style={styles.decomp.text} zDepth={0}>"Zimná automobilová súťaž, nielen pre profesionálnych jazdcov, zaradená do podujatia MRC 2018."</Paper>
-        <RaisedButton containerElement={<Link to = "/EventRegistration" />} label="Prihlásiť sa" secondary={true} style={styles.decomp.btnReg}/>
+          <RaisedButton containerElement={<Link to = "/EventRegistration" />} label="Prihlásiť sa" secondary={true} style={styles.decomp.btnReg}/>
           <RaisedButton containerElement={<Link to = "/Events" />} label="Späť" raised={true} style={styles.decomp.btnReg}/>
         </Paper>
       </List>
@@ -68,7 +68,7 @@ class DeComp extends Component {
               <TableRow>
                 <TableHeaderColumn >Meno a Priezvisko</TableHeaderColumn>
                 <TableHeaderColumn >Tím</TableHeaderColumn>
-              <TableHeaderColumn >Skupina</TableHeaderColumn>
+                <TableHeaderColumn >Skupina</TableHeaderColumn>
               </TableRow>
             </TableHeader>
             <TableBody displayRowCheckbox={this.state.showCheckboxes} deselectOnClickaway={this.state.deselectOnClickaway} showRowHover={this.state.showRowHover} stripedRows={this.state.stripedRows}>
@@ -76,7 +76,7 @@ class DeComp extends Component {
                 tableData.map((row, index) => (<TableRow key={index}>
                   <TableRowColumn>{row.firstname + ' ' + row.lastname}</TableRowColumn>
                   <TableRowColumn>{row.team}</TableRowColumn>
-                <TableRowColumn>{row.group}</TableRowColumn>
+                  <TableRowColumn>{row.group}</TableRowColumn>
                 </TableRow>))
               }
             </TableBody>

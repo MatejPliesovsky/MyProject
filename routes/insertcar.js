@@ -26,20 +26,21 @@ router.post('/', function(req, res) {
       let user = users[0];
       db.collection('users').update({
         login
-      },{$set:{
-        session_id,
-        user_id,
-        manufacturer,
-        carmodel,
-        enginevalue,
-        power,
-        turbo,
-        gear,
-        evidence_number
-      }})
-        res.json({inserted: true});
-      }
-    );
+      }, {
+        $set: {
+          session_id,
+          user_id,
+          manufacturer,
+          carmodel,
+          enginevalue,
+          power,
+          turbo,
+          gear,
+          evidence_number
+        }
+      })
+      res.json({inserted: true});
+    });
   });
 });
 

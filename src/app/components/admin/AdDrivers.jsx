@@ -55,11 +55,11 @@ class AdDrivers extends Component {
             <TableHeaderColumn >ID</TableHeaderColumn>
             <TableHeaderColumn >Meno a Priezvisko</TableHeaderColumn>
             <TableHeaderColumn >Tím</TableHeaderColumn>
-          <TableHeaderColumn >Dátum nar.</TableHeaderColumn>
-        <TableHeaderColumn >E-mail</TableHeaderColumn>
-      <TableHeaderColumn >Bydlisko</TableHeaderColumn>
-        <TableHeaderColumn >Telefón</TableHeaderColumn>
-      <TableHeaderColumn >Vodičský preukaz</TableHeaderColumn>
+            <TableHeaderColumn >Dátum nar.</TableHeaderColumn>
+            <TableHeaderColumn >E-mail</TableHeaderColumn>
+            <TableHeaderColumn >Bydlisko</TableHeaderColumn>
+            <TableHeaderColumn >Telefón</TableHeaderColumn>
+            <TableHeaderColumn >Vodičský preukaz</TableHeaderColumn>
             <TableHeaderColumn ></TableHeaderColumn>
           </TableRow>
         </TableHeader>
@@ -69,11 +69,11 @@ class AdDrivers extends Component {
               <TableRowColumn>{index}</TableRowColumn>
               <TableRowColumn>{row.firstname + ' ' + row.lastname}</TableRowColumn>
               <TableRowColumn>{row.team}</TableRowColumn>
-            <TableRowColumn>{row.dob}</TableRowColumn>
-          <TableRowColumn>{row.email}</TableRowColumn>
-        <TableRowColumn>{row.street + ' ' + row.state+ ' ' +row.zip}</TableRowColumn>
+              <TableRowColumn>{row.dob}</TableRowColumn>
+              <TableRowColumn>{row.email}</TableRowColumn>
+              <TableRowColumn>{row.street + ' ' + row.state + ' ' + row.zip}</TableRowColumn>
               <TableRowColumn>{row.phone}</TableRowColumn>
-            <TableRowColumn>{row.drivinglicence}</TableRowColumn>
+              <TableRowColumn>{row.drivinglicence}</TableRowColumn>
               <TableRowColumn>
                 <div>
                   <IconButton iconStyle={styles.smallIcon} containerElement={<Link to = "/AdminDash" />}>

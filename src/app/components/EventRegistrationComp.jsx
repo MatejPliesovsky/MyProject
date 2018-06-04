@@ -17,11 +17,10 @@ const onSubmit = async values => {
 }
 
 const EventRegistrationComp = ({initialData}) => {
-  console.log(initialData);
   let authenticated = window.sessionStorage.getItem("authenticated");
   // window.sessionStorage.setItem("authenticated", true);
   if (authenticated === "true")
-  
+
     return (<Form onSubmit={onSubmit} initialValues={initialData} validate={values => {
         const errors = {};
 
@@ -70,7 +69,7 @@ const EventRegistrationComp = ({initialData}) => {
             <Field id="evidence_number" name="evidence_number" component={TextField} placeholder="ŠPZ"/>
             <br/>
 
-          <button type="submit" disabled={pristine || invalid}>
+            <button type="submit" disabled={pristine || invalid}>
               Potrvdiť
             </button>
           </div>
@@ -81,21 +80,14 @@ const EventRegistrationComp = ({initialData}) => {
 
 export default compose(lifecycle({
   componentWillMount() {
-    console.log(":DidMount");
     axios.get('/userProfile/loadUserData').then((response) => {
-      console.log(response.data.authenticated);
       if (response.data.authenticated === false) {
         window.sessionStorage.setItem("authenticated", false);
         window.location = "/";
       }
-      // window.sessionStorage.setItem("authenticated", true);
-      console.log('response');
-      console.log(response);
       this.setState({user: response.data});
     }).catch((error) => {
       console.log(error);
     });;
-
-    console.log(this.props)
   }
 }))(EventRegistrationComp);

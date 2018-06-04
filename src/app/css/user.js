@@ -1,7 +1,7 @@
 export default {
   posFields: {
     marginLeft: 2 + '%',
-    width: 20 + '%',
+    width: 20 + '%'
   },
   headline: {
     fontSize: 24,
@@ -20,7 +20,7 @@ export default {
     marginBottom: 0 + '%',
     marginRight: 10 + '%',
     textAlign: 'center',
-    display: 'inline-block',
+    display: 'inline-block'
   },
   circular: {
     marginTop: -410,
@@ -30,11 +30,11 @@ export default {
     borderRadius: 100 + '%'
   },
   upload: {
-    marginLeft:765,
-    marginTop:-190,
-    width: 260,
+    marginLeft: 765,
+    marginTop: -190,
+    width: 260
   },
-  imgInput:{
+  imgInput: {
     cursor: 'pointer',
     position: 'absolute',
     top: 0,
@@ -42,9 +42,9 @@ export default {
     right: 0,
     left: 0,
     width: '100%',
-    opacity: 0,
+    opacity: 0
   },
-  submit:{
-    marginLeft:-432,
+  submit: {
+    marginLeft: -432
   }
 };

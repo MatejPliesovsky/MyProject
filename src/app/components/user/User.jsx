@@ -12,7 +12,6 @@ import PasswordField from '../ff-mui/PasswordField';
 import styles from '../../css';
 
 const doUpdate = values => axios.post('/update', values).then((response) => {
-  console.log(response);
   if (response.data && response.data.login) {
     const login = response.data.login;
     window.sessionStorage.setItem("authenticated", true);
@@ -31,9 +30,7 @@ const onSubmit = async values => {
 }
 
 const User = ({initialData}) => {
-  console.log(initialData);
   let authenticated = window.sessionStorage.getItem("authenticated");
-  // window.sessionStorage.setItem("authenticated", true);
   if (authenticated === "true")
     return (<Form onSubmit={onSubmit} initialValues={initialData} validate={values => {
         const errors = {};
@@ -44,10 +41,10 @@ const User = ({initialData}) => {
           <Paper style={styles.user.profTab} zDepth={0}>
             <Field id="login" name="login" component={TextField} placeholder="Prihlasovacie meno"/>
             <Field id="firstname" name="firstname" component={TextField} placeholder="Meno"/><br/>
-            <Field id="lastname"  name="lastname" component={TextField} placeholder="Priezvisko"/>
+            <Field id="lastname" name="lastname" component={TextField} placeholder="Priezvisko"/>
             <Field id="dob" name="dob" component={TextField} placeholder="Dátum narodenia"/><br/>
             <Field id="street" name="street" component={TextField} placeholder="Ulica"/>
-            <Field id="city"  name="city" component={TextField} placeholder="Mesto"/><br/>
+            <Field id="city" name="city" component={TextField} placeholder="Mesto"/><br/>
             <Field id="zip" name="zip" component={TextField} placeholder="PSČ"/>
             <Field id="state" name="state" component={TextField} placeholder="Štát"/><br/>
             <Field id="phone" name="phone" component={TextField} placeholder="Telefón"/>

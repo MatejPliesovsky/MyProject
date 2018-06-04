@@ -7,7 +7,7 @@ class User extends Component {
     super(props);
     this.state = {
       user: {
-        name: user.firstname,
+        name: user.firstname
       }
     }
     this.fetchUsers = this.fetchUsers.bind(this);

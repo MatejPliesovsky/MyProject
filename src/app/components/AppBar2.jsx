@@ -19,7 +19,7 @@ export default class AppbarWithNav extends Component {
 
   render() {
     return (<div>
-      <AppBar title="Evidenčný portál" style={styles.pos} iconElementLeft={<IconButton> < NavigationClose />< /IconButton>} iconElementRight={<FlatButton containerElement = {
+      <AppBar title="Evidenčný portál" style={styles.pos} iconElementRight={<FlatButton containerElement = {
           <Link to="/"/>
         }
         label = "Domov" />}/>
