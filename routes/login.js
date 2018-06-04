@@ -13,7 +13,6 @@ router.post('/', function(req, res) {
     let db = client.db('drivers')
     var cursor = db.collection('users').find({login, password}).toArray(function(error, users) {
       let user = users[0];
-      console.log(users);
       if (user) {
         db.collection('users').update({
           login: user.login,
@@ -21,16 +20,13 @@ router.post('/', function(req, res) {
         }, {$set: {
             session_id
           }});
-        console.log(`user ${user.login} logged id`);
-        console.log(user);
         res.send(user);
       } else {
         req.session.authenticated = false;
-        // res.json({error: "Invalid username or password"});
+        res.json({error: "Skúste znova..."})
       }
     });
   });
-  // res.send();
 });
 
 module.exports = router;

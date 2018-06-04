@@ -25,9 +25,9 @@ router.get('/isAuthenticated', function(req, res, next) {
   });
 });
 
-router.get('/', function(req, res, next) {
+router.get('/loadUserData', function(req, res, next) {
 
-  // if(!req.session.authenticated) res.end();
+ // if(!req.session.authenticated) return res.end();
 
   let sessionID = req.sessionID;
   console.log('sessionID');
@@ -40,8 +40,10 @@ router.get('/', function(req, res, next) {
         console.log(`profile`);
         console.log(user);
         res.json(user);
-      } else
-        res.json({error: "Access denied"});
+      }
+      else {
+        res.json({authenticated: false})
+      }
       }
     );
   });

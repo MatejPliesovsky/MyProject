@@ -8,8 +8,6 @@ const url = 'mongodb://localhost:27017';
 
 router.post('/', function(req, res) {
   var session_id = req.sessionID;
-  console.log('logout sessionID');
-  console.log(sessionID);
   MongoClient.connect(url, (err, client) => {
     let db = client.db('drivers')
     var cursor = db.collection('users').find({session_id}).toArray(function(error, users) {
@@ -20,7 +18,6 @@ router.post('/', function(req, res) {
           session_id: null
         }
       });
-      //res.send("You logged out");
     });
   });
   res.send();

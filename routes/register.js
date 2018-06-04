@@ -31,7 +31,7 @@ router.post('/', function(req, res) {
     var cursor = db.collection('users').find({login}).toArray(function(error, users) {
       let user = users[0];
       if (user) {
-        res.json({error: "username taken"})
+        res.json({error: "Užívateľské meno už existuje..."})
       } else if (db.collection('users').insert({
         session_id,
         role,
