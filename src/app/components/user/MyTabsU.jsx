@@ -7,7 +7,7 @@ import SwipeableViews from 'react-swipeable-views';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import axios from 'axios';
 import User from './User.jsx';
 import CoDriver from './CoDriver.jsx';
 import Car from './Car.jsx';
@@ -33,7 +33,8 @@ export default class MyTabsU extends React.Component {
     super(props);
     this.state = {
       slideIndex: 0,
-      open: false
+      open: false,
+      user:null
     };
   }
 
@@ -48,9 +49,23 @@ export default class MyTabsU extends React.Component {
   handleClose = () => {
     this.setState({open: false});
   };
-
+ componentWillMount(){
+   axios.get('/userProfile/loadUserData').then((response) => {
+     console.log(response.data.authenticated);
+     if(response.data.authenticated === false) {
+        window.sessionStorage.setItem("authenticated", false);
+        window.location="/";
+     }
+    // window.sessionStorage.setItem("authenticated", true);
+     console.log('response');
+     console.log(response);
+     this.setState({user:response.data});
+   }).catch((error) => {
+     console.log(error);
+   });;
+ }
   render() {
-
+    const {user}=this.state;
     const actions = [
       <FlatButton label="Zrušiť" primary={true} onClick={this.handleClose}/>,
       <FlatButton label="Uložiť" primary={true} linkButton={true} onClick={this.handleClose} href="/UserHomeScreen"/>
@@ -62,17 +77,16 @@ export default class MyTabsU extends React.Component {
         <Tab label="Tím" value={1}/>
         <Tab label="Vozidlo" value={2}/>
       </Tabs>
-      <RaisedButton onClick={this.handleOpen} label="Uložiť" primary={true} style={styles.save}/>
-      <RaisedButton label="Zrušiť" secondary={true} style={styles.cancel} containerElement={<Link to = "/UserHomeScreen" />}/>
+      <RaisedButton label="Späť" secondary={true} style={styles.cancel} containerElement={<Link to = "/UserHomeScreen" />}/>
       <Dialog actions={actions} modal={false} open={this.state.open} onRequestClose={this.handleClose}>
         Uložiť zmeny?
       </Dialog>
 
       <SwipeableViews index={this.state.slideIndex} onChangeIndex={this.handleChange}>
 
-        <User/>
+        <User initialData = {user}/>
         <div style={styles.slide}>
-          <CoDriver/>
+          <CoDriver initialData = {user}/>
         </div>
 
         <div style={styles.slide}>

@@ -17,7 +17,7 @@ const doLogin = values => axios.post('/login', values).then((response) => {
     window.document.location = location;
     window.sessionStorage.setItem("authenticated", true);
   } else {
-    alert("Skúste znova...");
+    alert(response.data.error);
   }
 
 }).catch((error) => {

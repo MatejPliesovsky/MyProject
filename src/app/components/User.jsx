@@ -7,14 +7,14 @@ class User extends Component {
     super(props);
     this.state = {
       user: {
-        name: ''
+        name: user.firstname,
       }
     }
     this.fetchUsers = this.fetchUsers.bind(this);
   }
 
   fetchUsers() {
-    axios.get('/users').then((response) => {
+    axios.get('/drivers').then((response) => {
       this.setState({user: response.data});
     }).catch((error) => {
       console.log(error);
@@ -27,7 +27,7 @@ class User extends Component {
 
   render() {
     return (<div className="user">
-      <h1>Hello {this.state.user.name}</h1>
+      <h1>Hello {this.state.user.firstname}</h1>
     </div>);
   }
 }

@@ -16,7 +16,7 @@ export default class EventRegistrationComp extends React.Component {
       <RaisedButton containerElement={<Link to = "/Details" />} label="Odoslať" primary={true} style={styles.eventregcomp.submit}/>
       <RaisedButton containerElement={<Link to = "/Details" />} label="Zrušiť" secondary={true} style={styles.eventregcomp.cancel}/>
       <div style={styles.eventregcomp.evRegTab}>
-        <div style={styles.eventregcomp.topText}>Registration</div>
+        <div style={styles.eventregcomp.topText}>Prihláška</div>
         <ListItem primaryText="Údaje o jazdcovi"/>
         <TextField hintText="Meno"/>
         <TextField hintText="Priezvisko"/><br/>

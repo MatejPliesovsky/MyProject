@@ -14,7 +14,7 @@ import EventRegistration from '../pages/EventRegistration.jsx';
 
 const App = () => (<Router>
   <Switch>
-    <Route exact="exact" path="/" render={(props) => <WelcomePage {...props}/>}/>
+    <Route exact path="/" render={(props) => <WelcomePage {...props}/>}/>
     <Route path='/UserHomeScreen' component={UserHomeScreen}/>
     <Route path='/UserDash' component={UserDash}/>
     <Route path='/AdminDash' component={AdminDash}/>
