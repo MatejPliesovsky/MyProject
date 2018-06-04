@@ -12,6 +12,8 @@ var bodyParser = require('body-parser')
 var login = require('./routes/login');
 var logout = require('./routes/logout');
 var register = require('./routes/register');
+var update = require('./routes/update');
+var insert = require('./routes/insert');
 var users = require('./routes/users');
 var userProfile = require('./routes/userProfile');
 var drivers = require('./routes/drivers');
@@ -43,12 +45,12 @@ app.use(bodyParser.json());
 
 app.use(session({
   secret: 'keyboard cat',
-  resave: false,
+  resave: true,
   saveUninitialized: true,
   cookie: {
     path: '/',
     httpOnly: false,
-    secure: true,
+    secure: false,
     maxAge: null
   }
 }));
@@ -61,15 +63,17 @@ app.use(session({
 
 
 
-// app.all("*", function(req, res, next) {
-//   console.log(req.session);
-//   next();
-//   res.
-//   res.sendFile(path.resolve(__dirname, 'src', 'index.html'));
-// });
+app.all("*", function(req, res, next) {
+  console.log(req.sessionID);
+  next();
+  // res.
+  // res.sendFile(path.resolve(__dirname, 'src', 'index.html'));
+});
 app.use('/users', users);
 app.use('/login', login);
 app.use('/register',register);
+app.use('/update',update);
+app.use('/insert',insert);
 app.use('/logout', logout);
 app.use('/drivers', drivers);
 app.use('/userProfile', userProfile);
