@@ -1,6 +1,5 @@
 export default {
   posFields: {
-    marginTop: 3 + '%',
     marginLeft: 2 + '%',
     width: 20 + '%',
   },
@@ -13,16 +12,26 @@ export default {
   slide: {
     padding: 10
   },
+  profTab: {
+    height: 410,
+    width: 777,
+    marginTop: 3 + '%',
+    marginLeft: -43 + '%',
+    marginBottom: 0 + '%',
+    marginRight: 10 + '%',
+    textAlign: 'center',
+    display: 'inline-block',
+  },
   circular: {
-    marginTop: -380,
-    marginLeft: 500,
+    marginTop: -410,
+    marginLeft: 780,
     width: 240,
     height: 240,
     borderRadius: 100 + '%'
   },
   upload: {
-    marginLeft:480,
-    marginTop:-140,
+    marginLeft:765,
+    marginTop:-190,
     width: 260,
   },
   imgInput:{
@@ -34,5 +43,8 @@ export default {
     left: 0,
     width: '100%',
     opacity: 0,
+  },
+  submit:{
+    marginLeft:-432,
   }
 };

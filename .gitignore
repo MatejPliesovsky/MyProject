@@ -2,3 +2,5 @@ node_modules
 node_modulesa
 src/public
 package-lock.json
+src/app/components/user/test.txt
+doc

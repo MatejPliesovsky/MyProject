@@ -1,8 +1,7 @@
 export default {
   posFields: {
-    marginTop: 3 + '%',
     marginLeft: 2 + '%',
-    width: 40 + '%'
+    width: 20 + '%'
   },
   slide: {
     padding: 10
@@ -11,15 +10,15 @@ export default {
     marginLeft: 10
   },
   circular: {
-    marginTop: -380,
-    marginLeft: 500,
+    marginTop: -375,
+    marginLeft: 780,
     width: 240,
     height: 240,
     borderRadius: 100 + '%'
   },
   upload: {
-    marginLeft: 480,
-    marginTop: -140,
+    marginLeft:765,
+    marginTop:-160,
     width: 260
   },
   imgInput: {
@@ -31,5 +30,8 @@ export default {
     left: 0,
     width: '100%',
     opacity: 0
+  },
+  submit:{
+    marginLeft:-432,
   }
 };
