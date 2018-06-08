@@ -17,6 +17,8 @@ var insert = require('./routes/insert');
 var insertcar = require('./routes/insertcar');
 var users = require('./routes/users');
 var userProfile = require('./routes/userProfile');
+var competitors = require('./routes/competitors');
+var signuponevent = require('./routes/signuponevent');
 var drivers = require('./routes/drivers');
 
 app.use(express.static(__dirname + '/src'));
@@ -47,6 +49,8 @@ app.use('/update',update);
 app.use('/insert',insert);
 app.use('/insertcar',insertcar);
 app.use('/logout', logout);
+app.use('/signuponevent', signuponevent);
+app.use('/competitors', competitors);
 app.use('/drivers', drivers);
 app.use('/userProfile', userProfile);
 app.use('*', function(req, res) {

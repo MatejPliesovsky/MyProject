@@ -35,7 +35,7 @@ class DeComp extends Component {
     tableData: null
   };
   fetchDrivers() {
-    axios.get('/drivers').then((response) => {
+    axios.get('/competitors').then((response) => {
       this.setState({tableData: response.data});
     }).catch((error) => {
       console.log(error);

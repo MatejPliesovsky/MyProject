@@ -9,7 +9,7 @@ export default {
   evRegTab: {
     height: 500,
     width: 170,
-    marginTop: -4 + '%',
+    marginTop: -2 + '%',
     marginLeft: 5 + '%',
     marginRight: 10 + '%',
     textAlign: 'center'
@@ -21,12 +21,6 @@ export default {
     marginLeft: 40 + '%',
     marginRight: 10 + '%',
     textAlign: 'center'
-  },
-  submit: {
-    width: 100,
-    height: 40,
-    marginTop: 1 + '%',
-    marginLeft: 1 + '%'
   },
   back: {
     width: 100,
