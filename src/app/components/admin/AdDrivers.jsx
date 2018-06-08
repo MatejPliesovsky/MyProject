@@ -31,7 +31,10 @@ class AdDrivers extends Component {
     showCheckboxes: true,
     tableData: null
   };
-
+constructor(props){
+  super(props);
+  this.handleTodoDelete = this.handleTodoDelete.bind(this);
+}
   fetchDrivers() {
     axios.get('/drivers').then((response) => {
       this.setState({tableData: response.data});
@@ -43,6 +46,17 @@ class AdDrivers extends Component {
   componentWillMount() {
     this.fetchDrivers();
   }
+
+  handleTodoDelete(id) {
+    {
+      axios.delete('/deletion').then((response) => {
+        if (response.data.authenticated) {
+          window.sessionStorage.setItem("authenticated", response.data.authenticated);
+        }
+      }).catch((error) => {
+      });;
+    }
+   }
 
   render() {
     const {tableData} = this.state;
@@ -76,7 +90,7 @@ class AdDrivers extends Component {
               <TableRowColumn>{row.drivinglicence}</TableRowColumn>
               <TableRowColumn>
                 <div>
-                  <IconButton iconStyle={styles.smallIcon} containerElement={<Link to = "/AdminDash" />}>
+                  <IconButton onClick={this.handleTodoDelete} iconStyle={styles.smallIcon} containerElement={<Link to = "/AdminDash" />}>
                     <Delete/>
                   </IconButton>
                 </div>
