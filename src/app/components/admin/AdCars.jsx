@@ -11,6 +11,7 @@ import {
 } from 'material-ui/Table';
 import IconButton from 'material-ui/IconButton';
 import Delete from 'material-ui/svg-icons/action/delete';
+import axios from 'axios';
 
 const styles = {
   smallIcon: {
@@ -18,66 +19,6 @@ const styles = {
     height: 26
   }
 };
-
-const tableData = [
-  {
-    brand: 'Suzuki',
-    model: 'Swift gti',
-    fuel: 'petrol',
-    power: '80kw',
-    volume: '1298',
-    turbo: 'no',
-    gear: 'front'
-  }, {
-    brand: 'Skoda',
-    model: 'Felicia',
-    fuel: 'petrol',
-    power: '68kw',
-    volume: '1298',
-    turbo: 'no',
-    gear: 'front'
-  }, {
-    brand: 'Citroen',
-    model: 'Saxo',
-    fuel: 'petrol',
-    power: '89kw',
-    volume: '1587',
-    turbo: 'no',
-    gear: 'front'
-  }, {
-    brand: 'Honda',
-    model: 'Civic',
-    fuel: 'petrol',
-    power: '75kw',
-    volume: '1590',
-    turbo: 'no',
-    gear: 'front'
-  }, {
-    brand: 'Marian Macej',
-    model: 'Rally-Foto',
-    fuel: 'petrol',
-    power: '95kw',
-    volume: '1980',
-    turbo: 'no',
-    gear: 'rear'
-  }, {
-    brand: 'Honda',
-    model: 'Civic',
-    fuel: 'petrol',
-    power: '92kw',
-    volume: '1590',
-    turbo: 'no',
-    gear: 'front'
-  }, {
-    brand: 'Ford',
-    model: 'Fiesta',
-    fuel: 'petrol',
-    power: '80kw',
-    volume: '1789',
-    turbo: 'no',
-    gear: 'front'
-  }
-];
 
 class AdCars extends Component {
   state = {
@@ -87,10 +28,40 @@ class AdCars extends Component {
     multiSelectable: true,
     enableSelectAll: true,
     deselectOnClickaway: true,
-    showCheckboxes: true
+    showCheckboxes: true,
+    tableData: null
   };
+  constructor(props) {
+    super(props);
+    this.handleTodoDelete = this.handleTodoDelete.bind(this);
+  }
+  fetchDrivers() {
+    axios.get('/drivers').then((response) => {
+      this.setState({tableData: response.data});
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
+  componentWillMount() {
+    this.fetchDrivers();
+  }
+
+  handleTodoDelete(id) {
+    {
+      axios.delete('/deletion').then((response) => {
+        if (response.data.authenticated) {
+          window.sessionStorage.setItem("authenticated", response.data.authenticated);
+        }
+      }).catch((error) => {});;
+    }
+  }
 
   render() {
+    const {tableData} = this.state;
+    if (!tableData)
+      return (<div>Loading data, please wait...</div>);
+
     return (<div>
       <Table fixedHeader={this.state.fixedHeader} fixedFooter={this.state.fixedFooter} selectable={this.state.selectable} multiSelectable={this.state.multiSelectable}>
         <TableHeader displaySelectAll={this.state.showCheckboxes} adjustForCheckbox={this.state.showCheckboxes} enableSelectAll={this.state.enableSelectAll}>
@@ -110,16 +81,16 @@ class AdCars extends Component {
           {
             tableData.map((row, index) => (<TableRow key={index}>
               <TableRowColumn>{index}</TableRowColumn>
-              <TableRowColumn>{row.brand}</TableRowColumn>
-              <TableRowColumn>{row.model}</TableRowColumn>
-              <TableRowColumn>{row.fuel}</TableRowColumn>
+            <TableRowColumn>{row.manufacturer}</TableRowColumn>
+          <TableRowColumn>{row.carmodel}</TableRowColumn>
+        <TableRowColumn>{row.enginevalue}</TableRowColumn>
               <TableRowColumn>{row.power}</TableRowColumn>
-              <TableRowColumn>{row.volume}</TableRowColumn>
-              <TableRowColumn>{row.turbo}</TableRowColumn>
-              <TableRowColumn>{row.gear}</TableRowColumn>
+            <TableRowColumn>{row.turbo}</TableRowColumn>
+          <TableRowColumn>{row.gear}</TableRowColumn>
+        <TableRowColumn>{row.evidence_number}</TableRowColumn>
               <TableRowColumn>
                 <div>
-                  <IconButton iconStyle={styles.smallIcon} containerElement={<Link to = "/AdminDash" />}>
+                  <IconButton onClick={this.handleTodoDelete} iconStyle={styles.smallIcon} containerElement={<Link to = "/AdminDash" />}>
                     <Delete/>
                   </IconButton>
                 </div>
