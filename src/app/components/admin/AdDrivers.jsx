@@ -81,7 +81,7 @@ constructor(props){
           {
             tableData.map((row, index) => (<TableRow key={index}>
               <TableRowColumn>{index}</TableRowColumn>
-              <TableRowColumn>{row.firstname + ' ' + row.lastname}</TableRowColumn>
+            <TableRowColumn>{row.firstname + ' ' + row.lastname+' '+row.user_id}</TableRowColumn>
               <TableRowColumn>{row.team}</TableRowColumn>
               <TableRowColumn>{row.dob}</TableRowColumn>
               <TableRowColumn>{row.email}</TableRowColumn>

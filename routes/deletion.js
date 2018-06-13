@@ -9,21 +9,17 @@ const url = 'mongodb://localhost:27017';
 
 router.delete('/', function(req, res) {
   var session_id = req.sessionID;
-  var role = "user";
   const {
-    login
+    role = "user",
   } = req.body;
   MongoClient.connect(url, (err, client) => {
     let db = client.db('drivers');
-    var cursor = db.collection('users').find({login}).toArray(function(error, users) {
+    var cursor = db.collection('users').find({role:"user"}).toArray(function(error, users) {
       let user = users[0];
-      if (user) {
-        res.json({error: "Užívateľské meno už neexistuje..."})
-      } else if (db.collection('users').deleteOne({
-        login
-      }))
+    db.collection('users').deleteOne({
+        role:"user"
+      });
         res.json({deleted: true});
-        console.log({user_id});
       }
     );
   });
